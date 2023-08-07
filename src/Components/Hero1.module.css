@@ -1,0 +1,41 @@
+/** @format */
+main {
+  display: flex;
+  color: white;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+
+  padding: 4rem 0rem;
+}
+
+main .intro {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+main .netflixTV {
+  display: flex;
+  flex-direction: column;
+}
+main .netflixTV img {
+  width: 377px;
+  z-index: 1;
+}
+
+.vidContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  max-width: 2px;
+}
+.video {
+  position: absolute;
+  box-sizing: border-box;
+}
+.video video {
+  max-width: 278px;
+}

@@ -5,8 +5,7 @@ header {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  background-blend-mode: darken;
-  position: absolute;
+  /* position: absolute; */
 }
 
 header .content {

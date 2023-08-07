@@ -1,21 +1,18 @@
 /** @format */
 
-import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-import Header from "./Components/Header";
 
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <Header />,
-  },
-  {
-    path: "",
-  },
-]);
+import Home from "./pages/Home";
 
 function App() {
-  return <RouterProvider router={router} />;
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} /> 
+      </Routes>
+    </Router>
+  );
 }
 
 export default App;
