@@ -1,0 +1,25 @@
+/** @format */
+
+aside {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  align-items: center;
+  text-align: center;
+  padding: 3.5rem 0;
+}
+
+aside .container {
+  max-width: calc(100% - 3rem);
+}
+aside .container h1 {
+  margin: 0;
+  font-size: 32px;
+  text-align: center;
+  font-weight: 700;
+}
+
+aside .container p {
+  font-size: 18px;
+}
