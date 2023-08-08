@@ -1,0 +1,84 @@
+/** @format */
+
+main {
+  display: flex;
+  color: white;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  margin: 2rem 1.2rem;
+}
+
+main section {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+}
+
+main section .intro {
+  align-self: flex-start;
+}
+
+main .intro h1 {
+  margin: 0;
+  font-size: 32px;
+  text-align: center;
+}
+
+main .intro p {
+  margin: 1rem 1rem 0rem 1rem;
+  text-align: center;
+  color: white;
+  font-size: 18px;
+}
+
+main .downloads p {
+  margin: 0;
+  font-size: 10px;
+  line-height: 20px;
+  color: blue;
+}
+
+main .downloads h1{
+    font-size: 10px;
+    margin: 0;
+}
+
+
+main section div .mainDownloadsImg {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+main section div .subDownloadsContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px rgba(128, 128, 128, 0.7) solid;
+  border-radius: 0.7rem;
+  box-shadow: 0 0 2em 0 rgb(0, 0, 0);
+  box-sizing: border-box;
+  padding: 0.25rem 0.65rem;
+  min-width: 15rem;
+  position: absolute;
+  top: 74%;
+  background: rgb(0, 0, 0);
+}
+
+main section div .subDownloadsContainer .downloadsTitle {
+  padding-left: 0.5rem;
+}
+
+main section div .subDownloadsContainer .imgSub img {
+  height: 3rem;
+  margin: 0rem;
+}
+main section div .subDownloadsContainer .downloadingIcon {
+  display: flex;
+}
+main section div .subDownloadsContainer .downloadingIcon img {
+  height: 3rem;
+  margin: 0;
+}

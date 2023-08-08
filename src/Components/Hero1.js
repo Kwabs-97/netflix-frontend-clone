@@ -17,7 +17,7 @@ function Hero1() {
         <div className={classes.vidContainer}>
           <img src={netflixTV} alt="" />
           <div className={classes.video}>
-            <video autoPlay loop controls>
+            <video autoPlay loop>
               <source src="Netflix Ghana - Watch TV Shows Online, Watch Movies Online.mp4" />
             </video>
           </div>
