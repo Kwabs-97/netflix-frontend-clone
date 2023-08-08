@@ -1,0 +1,29 @@
+/** @format */
+
+aside {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3.5rem 0;
+}
+aside div {
+  text-align: center;
+  max-width: calc(100% - 3rem);
+}
+
+aside h1 {
+  margin: 0;
+  font-size: 32px;
+  text-align: center;
+  font-weight: 700;
+}
+
+aside p {
+  font-size: 18px;
+}
+
+aside .main {
+  display: flex;
+  flex-direction: column;
+  
+}
