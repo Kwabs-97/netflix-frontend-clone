@@ -60,10 +60,19 @@ footer .footer .container h3 button span {
 footer .footer .container .details {
   font-size: 18px;
   padding: 1.5rem;
+  background-color: rgb(45, 45, 45);
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.25s ease-in-out, opacity 0.25s ease-in-out;
 }
 
-.details {
-  background-color: rgb(45, 45, 45);
-  transition: all 0.25s;
-  transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+footer .footer .container .active {
+  max-height: 15000px;
+  opacity: 1;
+  padding: 1.5rem;
+}
+
+footer .footer .container .details span {
+  transition: all 0.25s cubic-bezier(0.5, 0, 0.1, 1);
+  -webkit-transition: all 0.25s cubic-bezier(0.5, 0, 0.1, 1);
 }
