@@ -2,10 +2,9 @@
 
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-
+import FAQItem from "./FAQItems"; // Import the newly created FAQItem component
 import classes from "./FAQS.module.css";
-import plusSVG from "../assets/plus-svgrepo-com.svg";
-import closeSVG from "../assets/close-md-svgrepo-com.svg";
+
 import { faqActions } from "../store/faq-slice";
 
 function FAQS() {
@@ -24,27 +23,25 @@ function FAQS() {
 
         <div className={classes.container}>
           <ul>
-            <li>
-              <h3>
-                <button onClick={toggleHandler}>
-                  <span>What is Netflix?</span>
-                  <div onClick={toggleHandler}>
-                    {toggleFaqs ? <img src={closeSVG} alt="" /> : <img src={plusSVG} alt="" />}
-                  </div>
-                </button>
-              </h3>
-              <div div className={`${classes.details} ${toggleFaqs ? classes.active : ""}`}>
-                <span>
-                  Netflix is a streaming service that offers a wide variety of award-winning TV
-                  shows, movies, anime, documentaries, and more on thousands of internet-connected
-                  devices. <br />
-                  <br />
-                  You can watch as much as you want, whenever you want without a single commercial –
-                  all for one low monthly price. There's always something new to discover and new TV
-                  shows and movies are added every week!
-                </span>
-              </div>
-            </li>
+            {/* Render first FAQ item */}
+            <FAQItem
+              question="What is Netflix?"
+              answer={`Netflix is a streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries, and more on thousands of internet-connected devices.\n\n You can watch as much as you want, whenever you want without a single commercial – all for one low monthly price. There's always something new to discover and new TV shows and movies are added every week!`}
+              isActive={toggleFaqs}
+              onToggle={toggleHandler}
+            />
+            <FAQItem
+              question="How much does Netflix cost?"
+              answer={`Watch Netflix on your smartphone, tablet, Smart TV, laptop, or streaming device, all for one fixed monthly fee. Plans range from US$2.99 to US$9.99 a month. No extra costs, no contracts.`}
+              isActive={toggleFaqs}
+              onToggle={toggleHandler}
+            />
+            <FAQItem
+              question="Where can I watch?"
+              answer={`Watch anywhere, anytime. Sign in with your Netflix account to watch instantly on the web at netflix.com from your personal computer or on any internet-connected device that offers the Netflix app, including smart TVs, smartphones, tablets, streaming media players and game consoles. \n\n You can also download your favorite shows with the iOS, Android, or Windows 10 app. Use downloads to watch while you're on the go and without an internet connection. Take Netflix with you anywhere.`}
+              isActive={toggleFaqs}
+              onToggle={toggleHandler}
+            />
           </ul>
         </div>
       </div>
