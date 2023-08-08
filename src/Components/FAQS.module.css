@@ -50,7 +50,9 @@ footer .footer .container h3 button:hover {
 footer .footer .container h3 button img {
   width: 22.63px;
   height: 22.63px;
+  transition: transform 3s ease-in-out;
 }
+
 footer .footer .container h3 button span {
   font-size: 18px;
 }
@@ -62,4 +64,6 @@ footer .footer .container .details {
 
 .details {
   background-color: rgb(45, 45, 45);
+  transition: all 0.25s;
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1);
 }
