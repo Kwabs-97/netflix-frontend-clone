@@ -7,6 +7,7 @@ import DownloadsHero from "../Components/DownloadsHero";
 import SubCard from "../Components/SubCard";
 import SubCard2 from "../Components/SubCard2";
 import FAQS from "../Components/FAQS";
+import Footer from "../Components/Footer";
 
 function Home() {
   return (
@@ -23,6 +24,7 @@ function Home() {
       <Divider />
       <FAQS />
       <Divider />
+      <Footer />
     </>
   );
 }
