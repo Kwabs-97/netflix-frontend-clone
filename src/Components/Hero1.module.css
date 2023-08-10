@@ -1,34 +1,61 @@
 /** @format */
-main {
-  display: flex;
-  color: white;
-  align-items: center;
-  flex-direction: column;
+.container {
   position: relative;
-  margin: 2rem 1.2rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  height: 100%;
+  box-sizing: border-box;
+  min-height: auto;
+  padding: 1.5rem 0;
+  margin: 0;
 }
 
-main .intro {
+.container .heroContainer {
+  margin: auto;
+  max-width: calc(100% - 3rem);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   text-align: center;
-  padding: 1.5rem 0rem;
 }
-main .intro h1 {
-  margin: 1rem;
+
+.container .intro {
+  -webkit-flex-basis: 50%;
+  -ms-flex-preferred-size: 50%;
+  flex-basis: 50%;
+  padding: 0;
+  z-index: 1;
+  width: 100%;
+}
+.container .intro h1 {
+  margin: 0rem;
   font-size: 32px;
 }
-main .intro p {
+.container .intro p {
   font-size: 17px;
   margin: 0;
 }
-main .netflixTV {
+.container .netflixTV {
   display: flex;
   flex-direction: column;
 }
-main .netflixTV img {
+.container .netflixTV img {
   width: 377px;
   z-index: 1;
 }

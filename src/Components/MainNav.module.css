@@ -5,7 +5,6 @@ header {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  /* position: absolute; */
 }
 
 header .content {
@@ -47,24 +46,65 @@ header .content {
 }
 
 .mainContainer {
-  color: white;
+  margin: auto;
+  max-width: calc(100% - 3rem);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
-  margin: 0px 30px 0px 30px;
-}
-.mainContainer .heroSection h1 {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   text-align: center;
 }
-.mainContainer .heroSection2 span {
-  font-weight: 500;
-  font-size: 18px;
+
+.mainContainer .heroContainer {
+  -webkit-flex-basis: 50%;
+  -ms-flex-preferred-size: 50%;
+  flex-basis: 50%;
+  padding: 0;
+  z-index: 1;
+  width: 100%;
+  max-width: calc(100% - 3rem);
+}
+
+.mainContainer .heroContainer h1 {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.mainContainer .heroContainer p {
+  margin: 1rem 0 0;
+  font-size: 1.125rem;
+  font-weight: 400;
+}
+
+.mainContainer .heroContainer .formsContainer {
+  margin: 1.5rem 0 2rem;
+}
+
+.mainContainer .heroContainer .formContainer .formsInnerContainer {
+  text-align: center;
+  box-sizing: border-box;
+  max-width: 61.5rem;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  content: "1";
 }
 
 .formContainer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
   flex-direction: column;
-  padding: 1rem 2rem;
 }
 
 .formContainer p {
@@ -73,12 +113,38 @@ header .content {
   font-size: 18px;
   line-height: 27px;
 }
-.formContainer div {
+
+.formContainer h3 {
+  margin: 0;
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 1.6875rem;
+}
+
+.formContainer .inputContainer {
+  text-align: left;
+  position: relative;
+  margin: 1rem auto 0;
+  width: 100%;
+  max-width: 36.625rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.formContainer .container {
   display: flex;
   flex-direction: column;
   align-items: center;
   position: relative;
-  width: 22rem;
+  width: 100%;
   height: 3rem;
   background-color: rgba(24, 20, 20, 0.648);
   border: rgb(100, 97, 97) 1px solid;

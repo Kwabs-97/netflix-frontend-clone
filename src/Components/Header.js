@@ -24,26 +24,29 @@ function MainNav() {
           </nav>
 
           <main className={classes.mainContainer}>
-            <div className={classes.heroSection}>
-              <h1>Ulimited movies, TV shows and more</h1>
-            </div>
-            <div className={classes.heroSection2}>
-              <span>Watch anywhere. Cancel anytime</span>
-            </div>
-            <div>
-              <form className={classes.formContainer}>
-                <p>Ready to watch? Enter your email to create or restart your membership.</p>
-                <div className={classes.container}>
-                  <input type="email" name="email" id="email" />
-                  <label htmlFor="email">Email address</label>
+            <div className={classes.heroContainer}>
+              <h1>Ulimited movies, TV shows, and more</h1>
+              <p>Watch anywhere. Cancel anytime</p>
+
+              <div className={classes.formsContainer}>
+                <div className={classes.formsInnerContainer}>
+                  <form className={classes.formContainer}>
+                    <h3>Ready to watch? Enter your email to create or restart your membership.</h3>
+                    <div className={classes.inputContainer}>
+                      <div className={classes.container}>
+                        <input type="email" name="email" id="email" />
+                        <label htmlFor="email">Email address</label>
+                      </div>
+                      <Link>
+                        Get Started{" "}
+                        <span>
+                          <img src={nextSVG} alt="" width={24} height={24} />
+                        </span>
+                      </Link>
+                    </div>
+                  </form>
                 </div>
-                <Link>
-                  Get Started{" "}
-                  <span>
-                    <img src={nextSVG} alt="" width={24} height={24} />
-                  </span>
-                </Link>
-              </form>
+              </div>
             </div>
           </main>
         </div>
