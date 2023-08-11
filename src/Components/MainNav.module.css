@@ -60,6 +60,7 @@ header .content {
   -ms-flex-direction: column;
   flex-direction: column;
   text-align: center;
+  padding: 1.1rem 0rem 0rem;
 }
 
 .mainContainer .heroContainer {
@@ -69,7 +70,7 @@ header .content {
   padding: 0;
   z-index: 1;
   width: 100%;
-  max-width: calc(100% - 3rem);
+  max-width: calc(100% - 0rem);
 }
 
 .mainContainer .heroContainer h1 {
@@ -86,6 +87,7 @@ header .content {
 
 .mainContainer .heroContainer .formsContainer {
   margin: 1.5rem 0 2rem;
+  padding: 0 1.5rem;
 }
 
 .mainContainer .heroContainer .formContainer .formsInnerContainer {
@@ -114,7 +116,7 @@ header .content {
   line-height: 27px;
 }
 
-.formContainer h3 {
+.formContainer h5 {
   margin: 0;
   font-size: 1.125rem;
   font-weight: 400;

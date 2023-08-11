@@ -9,7 +9,7 @@ function Hero1() {
     <main className={classes.container}>
       <div className={classes.heroContainer}>
         <section className={classes.intro}>
-          <h1>Enjoy on your TV</h1>
+          <h2>Enjoy on your TV</h2>
           <p>
             Watch on Smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray players, and more.
           </p>

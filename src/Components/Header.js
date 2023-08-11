@@ -31,7 +31,7 @@ function MainNav() {
               <div className={classes.formsContainer}>
                 <div className={classes.formsInnerContainer}>
                   <form className={classes.formContainer}>
-                    <h3>Ready to watch? Enter your email to create or restart your membership.</h3>
+                    <h5>Ready to watch? Enter your email to create or restart your membership.</h5>
                     <div className={classes.inputContainer}>
                       <div className={classes.container}>
                         <input type="email" name="email" id="email" />
