@@ -39,11 +39,10 @@ main .downloads p {
   color: blue;
 }
 
-main .downloads h1{
-    font-size: 10px;
-    margin: 0;
+main .downloads h1 {
+  font-size: 10px;
+  margin: 0;
 }
-
 
 main section div .mainDownloadsImg {
   display: flex;
@@ -52,9 +51,13 @@ main section div .mainDownloadsImg {
   position: relative;
 }
 
+main section div img {
+  width: 100%;
+}
+
 main section div .subDownloadsContainer {
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
   border: 2px rgba(128, 128, 128, 0.7) solid;
   border-radius: 0.7rem;
@@ -69,11 +72,11 @@ main section div .subDownloadsContainer {
 
 main section div .subDownloadsContainer .downloadsTitle {
   padding-left: 0.5rem;
+  padding-right: 9rem;
 }
 
 main section div .subDownloadsContainer .imgSub img {
   height: 3rem;
-  margin: 0rem;
 }
 main section div .subDownloadsContainer .downloadingIcon {
   display: flex;
@@ -81,4 +84,75 @@ main section div .subDownloadsContainer .downloadingIcon {
 main section div .subDownloadsContainer .downloadingIcon img {
   height: 3rem;
   margin: 0;
+}
+
+@media (min-width: 768px) {
+  main section div .subDownloadsContainer {
+    z-index: -1;
+    overflow: hidden;
+    position: absolute;
+    left: 50%;
+    bottom: 8%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    margin: 0 auto;
+    background: rgb(0, 0, 0);
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+
+    width: 60%;
+    min-width: 15rem;
+    padding: 0.35rem 0.75rem;
+    border: 2px solid rgba(128, 128, 128, 0.7);
+    box-shadow: 0 0 2em 0 rgb(0, 0, 0);
+    border-radius: 0.75rem;
+    z-index: 1;
+  }
+  main section div .subDownloadsContainer .imgSub img {
+    height: 4rem;
+  }
+  main section div .subDownloadsContainer .downloadsTitle h1 {
+    font-size: 1rem;
+    white-space: nowrap;
+  }
+  main section div .subDownloadsContainer .downloadsTitle p {
+    font-size: 0.875rem;
+  }
+}
+
+@media (min-width: 960px) {
+  .downloadsContainer {
+    flex-direction: row;
+    margin: 2rem 4rem;
+  }
+
+  .downloadsContainer .intro {
+    order: 2;
+    text-align: left;
+  }
+
+  .downloadsContainer .downloads {
+    order: 1;
+  }
+
+  .downloadsContainer .intro h2 {
+    font-size: 3rem;
+    font-weight: 900;
+    margin: 0;
+  }
+
+  .downloadsContainer .intro p {
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-align: left;
+    margin: 1rem 0 0 0;
+  }
 }

@@ -11,16 +11,16 @@ function DownloadsHero() {
   return (
     <main className={classes.downloadsContainer}>
       <section className={classes.intro}>
-        <h1>Download your shows to watch offline</h1>
+        <h2>Download your shows to watch offline</h2>
         <p>Save your favorites easily and always have something to watch</p>
       </section>
       <section className={classes.downloads}>
         <div className={classes.downloadsImg}>
           <div className={classes.mainDownloadsImg}>
-            <img src={DownloadsHeroImage} alt="" width="425" height="350"/>
+            <img src={DownloadsHeroImage} alt="" className="mainImg" />
             <div className={classes.subDownloadsContainer}>
               <div className={classes.imgSub}>
-                <img src={subImg} alt="" />
+                <img src={subImg} alt="" className="subImg"/>
               </div>
               <div className={classes.downloadsTitle}>
                 <h1>Stranger Things</h1>

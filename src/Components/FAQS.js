@@ -75,7 +75,10 @@ function FAQS() {
                     <label htmlFor="email">Email address</label>
                   </div>
                   <Link>
-                    Get Started <img src={nextSVG} alt="" width={24} height={24} />
+                    <span className="text">Get Started</span>
+                    <span>
+                      <img src={nextSVG} alt="" width={24} height={24} />
+                    </span>
                   </Link>
                 </div>
               </form>

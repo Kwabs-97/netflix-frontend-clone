@@ -216,3 +216,49 @@ header .content {
 .formContainer a span {
   display: flex;
 }
+
+@media (min-width: 768px) {
+  .formContainer .inputContainer {
+    flex-direction: row;
+    justify-content: center;
+    margin: 1rem auto 0;
+  }
+  .formContainer .inputContainer a {
+    display: flex;
+    flex-direction: row;
+    margin: 0 0 0 0.5rem;
+    align-items: center;
+  }
+  .formContainer .inputContainer a .text {
+    white-space: nowrap;
+  }
+  .heroContainer {
+    max-width: calc(100% - 5rem);
+  }
+}
+
+@media (min-width: 960px) {
+  .mainContainer {
+    min-height: 36.75rem;
+
+    align-items: center;
+    justify-content: center;
+  }
+  .mainContainer .heroContainer h1 {
+    font-size: 3rem;
+    font-weight: 900;
+  }
+  .mainContainer .heroContainer p {
+    font-size: 1.5rem;
+    font-weight: 400;
+  }
+
+  .formContainer .inputContainer {
+    max-width: 36.625rem;
+  }
+  .formContainer h5 {
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 1.875rem;
+  }
+}

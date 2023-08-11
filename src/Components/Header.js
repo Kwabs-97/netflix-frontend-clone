@@ -37,8 +37,9 @@ function MainNav() {
                         <input type="email" name="email" id="email" />
                         <label htmlFor="email">Email address</label>
                       </div>
+
                       <Link>
-                        Get Started{" "}
+                        <span className={classes.text}> Get Started </span>
                         <span>
                           <img src={nextSVG} alt="" width={24} height={24} />
                         </span>

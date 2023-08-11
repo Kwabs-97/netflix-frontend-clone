@@ -58,7 +58,7 @@
   flex-direction: column;
 }
 .container .netflixTV img {
-  width: 378px;
+  width: 100%;
   z-index: 1;
 }
 
@@ -67,13 +67,43 @@
   justify-content: center;
   align-items: center;
   position: relative;
-  max-width: 2px;
+
   margin-bottom: 1rem;
 }
 .video {
   position: absolute;
-  box-sizing: border-box;
 }
 .video video {
-  max-width: 278px;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .heroContainer {
+    max-width: calc(100% - 4rem);
+  }
+}
+
+@media (min-width: 960px) {
+  .container {
+    min-height: auto;
+    padding: 1.5rem 0;
+  }
+  .container .heroContainer {
+    flex-direction: row;
+  }
+
+  .container .heroContainer .intro {
+    margin: 0;
+    text-align: left;
+    padding-right: 0.375rem;
+  }
+  .container .heroContainer .intro h2 {
+    font-size: 3rem;
+    font-weight: 900;
+  }
+
+  .container .heroContainer .intro p {
+    font-size: 1.5rem;
+    font-weight: 400;
+  }
 }
