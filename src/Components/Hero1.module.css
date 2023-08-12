@@ -90,6 +90,8 @@
   }
   .container .heroContainer {
     flex-direction: row;
+
+    max-width: calc(100% - 4rem);
   }
 
   .container .heroContainer .intro {

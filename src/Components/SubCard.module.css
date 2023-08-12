@@ -13,7 +13,7 @@ aside {
 aside .container {
   max-width: calc(100% - 3rem);
 }
-aside .container h1 {
+aside .container h2 {
   margin: 0;
   font-size: 32px;
   text-align: center;
@@ -22,4 +22,31 @@ aside .container h1 {
 
 aside .container p {
   font-size: 18px;
+}
+
+@media (min-width: 960px) {
+  .aside {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    text-align: left;
+  }
+
+  .aside .container {
+    max-width: calc(100% - 39rem);
+    margin: 0rem 8rem;
+  }
+
+  .aside .container h2 {
+    text-align: left;
+
+    font-size: 3rem;
+    font-weight: 900;
+  }
+
+  .aside .container p {
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-align: left;
+  }
 }
