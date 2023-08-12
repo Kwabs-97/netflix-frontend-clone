@@ -6,9 +6,9 @@ import profileImg from "../assets/AAAABejKYujIIDQciqmGJJ8BtXkYKKTi5jiqexltvN1Ymv
 
 function SubCard2() {
   return (
-    <aside>
+    <aside className={classes.subcardContainer}>
       <div className={classes.header}>
-        <h1>Create profiles for kids</h1>
+        <h2>Create profiles for kids</h2>
         <p>
           Send kids on adventure with their favorite characters in a space made just for them--free
           with your membership

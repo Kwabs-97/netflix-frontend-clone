@@ -28,8 +28,7 @@ header .content {
 }
 
 .navContainer span img {
-  width: 24px;
-  height: 89px;
+  width: 100%;
 }
 .navContainer span a {
   text-decoration: none;
@@ -238,8 +237,23 @@ header .content {
 }
 
 @media (min-width: 960px) {
+  .navContainer{
+    margin: 0 10rem;
+  }
+  .mainContainer .heroContainer .formsContainer {
+    margin: 1.5rem 0 2rem;
+    padding: 0rem;
+  }
+  .container .content .navContainer .netflixSVG {
+    display: flex;
+  }
+  .container .content .navContainer img {
+    width: 9.5rem;
+    display: flex;
+  }
+
   .mainContainer {
-    min-height: 36.75rem;
+    min-height: 33rem;
 
     align-items: center;
     justify-content: center;

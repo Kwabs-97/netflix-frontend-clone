@@ -1,21 +1,25 @@
 /** @format */
 
 import { Link } from "react-router-dom";
-import { ReactSVG } from "react-svg";
+import { useRef } from "react";
 
 import netflixSVG from "../assets/netflix-svgrepo-com.svg";
 import nextSVG from "../assets/next-svgrepo-com.svg";
 import classes from "./MainNav.module.css";
 
 function MainNav() {
+  const inputRef = useRef(null);
+  const handleLinkClick = () => {
+    inputRef.current.focus();
+  };
   return (
     <>
       <header className={classes.container}>
         <div className={classes.content}>
           <nav className={classes}>
             <div className={classes.navContainer}>
-              <span>
-                <ReactSVG src={netflixSVG} />
+              <span className={classes.netflixSVG}>
+                <img src={netflixSVG} alt="" />
               </span>
               <span>
                 <Link>Sign In</Link>
@@ -34,11 +38,11 @@ function MainNav() {
                     <h5>Ready to watch? Enter your email to create or restart your membership.</h5>
                     <div className={classes.inputContainer}>
                       <div className={classes.container}>
-                        <input type="email" name="email" id="email" />
+                        <input type="email" name="email" id="email" ref={inputRef} />
                         <label htmlFor="email">Email address</label>
                       </div>
 
-                      <Link>
+                      <Link onClick={handleLinkClick}>
                         <span className={classes.text}> Get Started </span>
                         <span>
                           <img src={nextSVG} alt="" width={24} height={24} />

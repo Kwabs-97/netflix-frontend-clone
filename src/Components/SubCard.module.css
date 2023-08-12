@@ -33,7 +33,8 @@ aside .container p {
   }
 
   .aside .container {
-    max-width: calc(100% - 39rem);
+    padding-left: 10rem;
+    max-width: calc(100% - 70rem);
     margin: 0rem 8rem;
   }
 

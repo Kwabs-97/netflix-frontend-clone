@@ -67,12 +67,14 @@ main section div .subDownloadsContainer {
   min-width: 15rem;
   position: absolute;
   top: 74%;
+  justify-content: space-evenly;
   background: rgb(0, 0, 0);
 }
 
 main section div .subDownloadsContainer .downloadsTitle {
   padding-left: 0.5rem;
-  padding-right: 9rem;
+  display: flex;
+  flex-direction: column;
 }
 
 main section div .subDownloadsContainer .imgSub img {
@@ -107,7 +109,6 @@ main section div .subDownloadsContainer .downloadingIcon img {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-
     width: 60%;
     min-width: 15rem;
     padding: 0.35rem 0.75rem;
@@ -116,9 +117,14 @@ main section div .subDownloadsContainer .downloadingIcon img {
     border-radius: 0.75rem;
     z-index: 1;
   }
+
+  main section div .subDownloadsContainer .imgSub {
+    display: flex;
+  }
   main section div .subDownloadsContainer .imgSub img {
     height: 4rem;
   }
+
   main section div .subDownloadsContainer .downloadsTitle h1 {
     font-size: 1rem;
     white-space: nowrap;
@@ -131,16 +137,18 @@ main section div .subDownloadsContainer .downloadingIcon img {
 @media (min-width: 960px) {
   .downloadsContainer {
     flex-direction: row;
-    margin: 2rem 4rem;
+    margin: 1rem 8rem;
   }
 
   .downloadsContainer .intro {
     order: 2;
     text-align: left;
+    flex: 1;
   }
 
   .downloadsContainer .downloads {
     order: 1;
+    flex: 1;
   }
 
   .downloadsContainer .intro h2 {
@@ -156,5 +164,13 @@ main section div .subDownloadsContainer .downloadingIcon img {
     margin: 1rem 0 0 0;
   }
 
-  
+  main section div .subDownloadsContainer {
+    padding: 3rem 0.75rem;
+    top: 70%;
+    bottom: 50%;
+  }
+
+  .subDownloadsContainer img {
+    height: 4.5rem;
+  }
 }

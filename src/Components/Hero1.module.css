@@ -86,12 +86,11 @@
 @media (min-width: 960px) {
   .container {
     min-height: auto;
-    padding: 1.5rem 0;
+    padding: 3rem 0;
   }
   .container .heroContainer {
     flex-direction: row;
-
-    max-width: calc(100% - 4rem);
+    max-width: calc(100% - 20rem);
   }
 
   .container .heroContainer .intro {

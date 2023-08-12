@@ -25,5 +25,22 @@ aside p {
 aside .main {
   display: flex;
   flex-direction: column;
-  
+}
+
+@media (min-width: 960px) {
+  .subcardContainer {
+    flex-direction: row-reverse;
+    padding: 3rem 10rem;
+  }
+
+  .subcardContainer .header h2 {
+    font-size: 3rem;
+    font-weight: 900;
+    text-align: left;
+  }
+  .subcardContainer .header p {
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-align: left;
+  }
 }
