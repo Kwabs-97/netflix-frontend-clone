@@ -57,8 +57,7 @@ main section div img {
 
 main section div .subDownloadsContainer {
   display: flex;
-  justify-content: start;
-  align-items: center;
+ 
   border: 2px rgba(128, 128, 128, 0.7) solid;
   border-radius: 0.7rem;
   box-shadow: 0 0 2em 0 rgb(0, 0, 0);

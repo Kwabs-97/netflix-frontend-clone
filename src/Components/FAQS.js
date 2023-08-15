@@ -7,6 +7,8 @@ import nextSVG from "../assets/next-svgrepo-com.svg";
 import FAQItem from "./FAQItems"; // Import the newly created FAQItem component
 import classes from "./FAQS.module.css";
 
+import Newsletter from "./Newsletter";
+
 function FAQS() {
   const faqsData = [
     {
@@ -63,27 +65,8 @@ function FAQS() {
             ))}
             {/* Render first FAQ item */}
           </ul>
-          <div className={classes.newsletter}>
-            <div className={classes.newsletterContainer}>
-              <form action="">
-                <h3 className="ready">
-                  Ready to watch? Enter your email to create or restart your membership.
-                </h3>
-                <div className={classes.form}>
-                  <div className={classes.emailContainer}>
-                    <input type="email" name="email" id="email" />
-                    <label htmlFor="email">Email address</label>
-                  </div>
-                  <Link>
-                    <span className="text">Get Started</span>
-                    <span>
-                      <img src={nextSVG} alt="" width={24} height={24} />
-                    </span>
-                  </Link>
-                </div>
-              </form>
-            </div>
-          </div>
+
+          <Newsletter />
         </div>
       </div>
     </footer>

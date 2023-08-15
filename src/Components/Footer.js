@@ -105,7 +105,7 @@ function Footer() {
               />
             </div>
             <select name="languageSelect" id="">
-              <option value="en-Gh" label="English" selected>
+              <option value="en-Gh" label="English" defaultChecked>
                 English
               </option>
             </select>

@@ -13,5 +13,4 @@ const faqSlice = createSlice({
 });
 
 export const faqActions = faqSlice.actions;
-export default faqSlice
-
+export default faqSlice;

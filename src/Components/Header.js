@@ -3,14 +3,29 @@
 import { Link } from "react-router-dom";
 import { useRef } from "react";
 
+import { useDispatch, useSelector } from "react-redux";
+import { setEmail } from "../store/reducers/formReducer";
+
 import netflixSVG from "../assets/netflix-svgrepo-com.svg";
 import nextSVG from "../assets/next-svgrepo-com.svg";
 import classes from "./MainNav.module.css";
+import emailErrorSVG from "../assets/cancel-20px-svgrepo-com.svg";
+
+import Newsletter from "./Newsletter";
 
 function MainNav() {
+  const emailField = useSelector((state) => state.form.email);
+
+  const dispatch = useDispatch();
+
   const inputRef = useRef(null);
   const handleLinkClick = () => {
     inputRef.current.focus();
+  };
+
+  const handleEmailChange = (event) => {
+    const newEmail = event.target.value;
+    dispatch(setEmail(newEmail));
   };
   return (
     <>
@@ -31,27 +46,7 @@ function MainNav() {
             <div className={classes.heroContainer}>
               <h1>Ulimited movies, TV shows, and more</h1>
               <p>Watch anywhere. Cancel anytime</p>
-
-              <div className={classes.formsContainer}>
-                <div className={classes.formsInnerContainer}>
-                  <form className={classes.formContainer}>
-                    <h5>Ready to watch? Enter your email to create or restart your membership.</h5>
-                    <div className={classes.inputContainer}>
-                      <div className={classes.container}>
-                        <input type="email" name="email" id="email" ref={inputRef} />
-                        <label htmlFor="email">Email address</label>
-                      </div>
-
-                      <Link onClick={handleLinkClick}>
-                        <span className={classes.text}> Get Started </span>
-                        <span>
-                          <img src={nextSVG} alt="" width={24} height={24} />
-                        </span>
-                      </Link>
-                    </div>
-                  </form>
-                </div>
-              </div>
+              <Newsletter />
             </div>
           </main>
         </div>

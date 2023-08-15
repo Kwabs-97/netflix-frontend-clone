@@ -1,95 +1,11 @@
 /** @format */
 
-header {
-  background-image: url("../assets//GH-en-20230731-popsignuptwoweeks-perspective_alpha_website_small.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
-
-header .content {
-  position: relative;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: linear-gradient(
-    rgba(0, 0, 0, 0.9),
-    rgba(0, 0, 0, 0.5),
-    rgba(0, 0, 0, 0.6),
-    rgba(0, 0, 0, 0.9)
-  );
-}
-.navContainer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 0px 30px 0px 30px;
-}
-
-.navContainer span img {
-  width: 100%;
-}
-.navContainer span a {
-  text-decoration: none;
-  font-size: 14px;
-  line-height: 14px;
-  font-weight: 600;
-  text-align: center;
-  background-color: #e50914;
-  color: white;
-  border: transparent 1px solid;
-  border-radius: 4px;
-  padding: 7px 16px;
-  box-sizing: border-box;
-}
-
-.mainContainer {
-  margin: auto;
-  max-width: calc(100% - 3rem);
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  text-align: center;
-  padding: 1.1rem 0rem 0rem;
-}
-
-.mainContainer .heroContainer {
-  -webkit-flex-basis: 50%;
-  -ms-flex-preferred-size: 50%;
-  flex-basis: 50%;
-  padding: 0;
-  z-index: 1;
-  width: 100%;
-  max-width: calc(100% - 0rem);
-}
-
-.mainContainer .heroContainer h1 {
-  margin: 0;
-  font-size: 2rem;
-  font-weight: 700;
-}
-
-.mainContainer .heroContainer p {
-  margin: 1rem 0 0;
-  font-size: 1.125rem;
-  font-weight: 400;
-}
-
-.mainContainer .heroContainer .formsContainer {
+.formsContainer {
   margin: 1.5rem 0 2rem;
   padding: 0 1.5rem;
 }
 
-.mainContainer .heroContainer .formContainer .formsInnerContainer {
+.formContainer .formsInnerContainer {
   text-align: center;
   box-sizing: border-box;
   max-width: 61.5rem;
