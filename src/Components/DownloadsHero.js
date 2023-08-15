@@ -17,7 +17,7 @@ function DownloadsHero() {
       <section className={classes.downloads}>
         <div className={classes.downloadsImg}>
           <div className={classes.mainDownloadsImg}>
-            <img src={DownloadsHeroImage} alt="" className="mainImg" />
+            <img src={DownloadsHeroImage} alt="" className={classes.mainImg} />
             <div className={classes.subDownloadsContainer}>
               <div className={classes.imgSub}>
                 <img src={subImg} alt="" className="subImg"/>

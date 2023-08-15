@@ -32,7 +32,81 @@ main .intro p {
   font-size: 18px;
 }
 
-main .downloads p {
+.downloads .dowloadsImg {
+  -webkit-flex-basis: 50%;
+  -ms-flex-preferred-size: 50%;
+  flex-basis: 50%;
+  padding: 0;
+  z-index: 1;
+}
+
+ .mainDownloadsImg {
+  position: relative;
+}
+
+ .mainDownloadsImg .mainImg {
+  width: 100%;
+}
+
+.subDownloadsContainer {
+  z-index: 1;
+  overflow: hidden;
+  position: absolute;
+  left: 50%;
+  bottom: 8%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  margin: 0 auto;
+  background: rgb(0, 0, 0);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 60%;
+  min-width: 15rem;
+  padding: 0.25rem 0.65rem;
+  border: 2px solid rgba(128, 128, 128, 0.7);
+  box-shadow: 0 0 2em 0 rgb(0, 0, 0);
+  border-radius: 0.75rem;
+}
+
+.subDownloadsContainer .imgSub {
+  margin: 0 1rem 0 0;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
+.subDownloadsContainer .imgSub img {
+  height: 3rem;
+}
+
+.subDownloadsContainer .downloadsTitle h1 {
+  margin: 0;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.subDownloadsContainer .downloadsTitle p {
+  font-size: 0.75rem;
+  margin: 0;
+  color: #0071eb;
+}
+.subDownloadsContainer .downloadingIcon img {
+  height: 3rem;
+}
+
+/* main .downloads p {
   margin: 0;
   font-size: 10px;
   line-height: 20px;
@@ -63,7 +137,6 @@ main section div .subDownloadsContainer {
   box-shadow: 0 0 2em 0 rgb(0, 0, 0);
   box-sizing: border-box;
   padding: 0.25rem 0.65rem;
-
   position: absolute;
   top: 74%;
   justify-content: space-evenly;
@@ -86,7 +159,7 @@ main section div .subDownloadsContainer .downloadingIcon {
 main section div .subDownloadsContainer .downloadingIcon img {
   height: 3rem;
   margin: 0;
-}
+} */
 
 @media (min-width: 768px) {
   main section div .subDownloadsContainer {
