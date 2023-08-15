@@ -57,16 +57,17 @@ main section div img {
 
 main section div .subDownloadsContainer {
   display: flex;
- 
+
   border: 2px rgba(128, 128, 128, 0.7) solid;
   border-radius: 0.7rem;
   box-shadow: 0 0 2em 0 rgb(0, 0, 0);
   box-sizing: border-box;
   padding: 0.25rem 0.65rem;
-  min-width: 15rem;
+
   position: absolute;
   top: 74%;
   justify-content: space-evenly;
+  align-items: center;
   background: rgb(0, 0, 0);
 }
 
@@ -109,7 +110,7 @@ main section div .subDownloadsContainer .downloadingIcon img {
     -ms-flex-align: center;
     align-items: center;
     width: 60%;
-    min-width: 15rem;
+
     padding: 0.35rem 0.75rem;
     border: 2px solid rgba(128, 128, 128, 0.7);
     box-shadow: 0 0 2em 0 rgb(0, 0, 0);
