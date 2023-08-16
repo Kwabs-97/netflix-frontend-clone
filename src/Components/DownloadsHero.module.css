@@ -111,6 +111,18 @@
   height: 3rem;
 }
 
+.subDownloadsContainer .downloadsTitle {
+  text-align: left;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -webkit-flex-shrink: 1;
+  -ms-flex-negative: 1;
+  flex-shrink: 1;
+  margin: 0.3rem 0;
+}
+
 .subDownloadsContainer .downloadsTitle h1 {
   margin: 0;
   font-size: 0.875rem;
@@ -122,6 +134,7 @@
   margin: 0;
   color: #0071eb;
 }
+
 .subDownloadsContainer .downloadingIcon img {
   height: 3rem;
 }
