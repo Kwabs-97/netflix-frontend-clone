@@ -136,6 +136,14 @@
   transition: 250ms cubic-bezier(0.5, 0, 0.1, 1) 0s;
 }
 
+.formContainer .container.isValid {
+  border: green 1px solid;
+}
+
+.formContainer .container.isInvalid {
+  border: red 1px solid;
+}
+
 .formContainer .container input:not(:focus) ~ label {
   transition: 250ms cubic-bezier(1, 0.1, 0, 0.5) 0s;
 }

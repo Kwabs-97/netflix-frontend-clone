@@ -34,7 +34,15 @@ function Newsletter() {
           <h5>Ready to watch? Enter your email to create or restart your membership.</h5>
           <div className={classes.inputContainer}>
             <div className={classes.emailAndErrorMessage}>
-              <div className={`${classes.container} `}>
+              <div
+                className={` ${classes.container} ${
+                  emailField.errorMessage
+                    ? classes.isInvalid
+                    : emailField.isValid
+                    ? classes.isValid
+                    : ""
+                } `}
+              >
                 <input
                   type="email"
                   name="email"
