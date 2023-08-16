@@ -1,35 +1,55 @@
 /** @format */
 
-main {
-  display: flex;
-  color: white;
-  align-items: center;
-  flex-direction: column;
+.downloadsCenter {
   position: relative;
-  margin: 2rem 1.2rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  height: 100%;
+  box-sizing: border-box;
+  min-height: auto;
+  padding: 3.5rem 0;
 }
 
-main section {
+.downloadsCenter .downloadsContainer {
+  margin: auto;
+  max-width: calc(100% - 3rem);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  text-align: center;
+}
+
+.downloadsCenter .downloadsContainer .intro {
   display: flex;
   flex-direction: column;
-  margin-top: 1rem;
 }
 
-main section .intro {
-  align-self: flex-start;
-}
-
-main .intro h1 {
+.intro h2 {
   margin: 0;
-  font-size: 32px;
+  font-size: 2rem;
   text-align: center;
 }
 
-main .intro p {
-  margin: 1rem 1rem 0rem 1rem;
-  text-align: center;
-  color: white;
-  font-size: 18px;
+.intro p {
+  margin: 1rem 0 0;
+  font-size: 1.125rem;
+  font-weight: 400;
 }
 
 .downloads .dowloadsImg {
@@ -40,11 +60,11 @@ main .intro p {
   z-index: 1;
 }
 
- .mainDownloadsImg {
+.mainDownloadsImg {
   position: relative;
 }
 
- .mainDownloadsImg .mainImg {
+.mainDownloadsImg .mainImg {
   width: 100%;
 }
 
@@ -208,42 +228,24 @@ main section div .subDownloadsContainer .downloadingIcon img {
 }
 
 @media (min-width: 960px) {
-  .downloadsContainer {
-    flex-direction: row;
-    margin: 1rem 8rem;
+  .downloadsCenter .downloadsContainer {
+    flex-direction: row-reverse;
   }
 
-  .downloadsContainer .intro {
-    order: 2;
+  .downloadsCenter .downloadsContainer .intro {
     text-align: left;
-    flex: 1;
+    padding-left: 0.375rem;
   }
 
-  .downloadsContainer .downloads {
-    order: 1;
-    flex: 1;
-  }
-
-  .downloadsContainer .intro h2 {
+  .downloadsCenter .downloadsContainer .intro h2 {
+    text-align: start;
     font-size: 3rem;
     font-weight: 900;
-    margin: 0;
   }
+}
 
-  .downloadsContainer .intro p {
-    font-size: 1.5rem;
-    font-weight: 400;
-    text-align: left;
-    margin: 1rem 0 0 0;
-  }
-
-  main section div .subDownloadsContainer {
-    padding: 3rem 0.75rem;
-    top: 70%;
-    bottom: 50%;
-  }
-
-  .subDownloadsContainer img {
-    height: 4.5rem;
+@media (min-width: 1440px) {
+  .downloadsCenter .downloadsContainer {
+    max-width: calc(80% - 10rem);
   }
 }

@@ -1,20 +1,48 @@
+
 /** @format */
 
 footer {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
-  align-items: center;
-  padding: 2rem 0;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  height: 100%;
+  box-sizing: border-box;
+  min-height: auto;
+  padding: 3.5rem 0;
 }
 
 footer .footer {
+  margin: auto;
   max-width: calc(100% - 3rem);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  text-align: center;
 }
 footer .footer .container {
   display: flex;
   justify-content: center;
   flex-direction: column;
   color: white;
+}
+
+.container ul {
   margin: 1.5rem 0 0;
 }
 footer .footer h2 {
@@ -196,20 +224,26 @@ form .form a {
   }
 
   footer .footer {
-    max-width: calc(100% - 20rem);
-    padding: 2rem 0rem;
+    max-width: calc(100% - 4rem);
   }
-  footer .footer .container h3 button span {
-    font-size: 1.5rem;
+
+  footer .footer .container h2 {
+    font-size: 3rem;
+    font-weight: 900;
   }
-  footer .footer .container .details {
-    font-size: 1.5rem;
-  }
-  footer .footer .container h3 button {
+
+  footer .footer .container ul li h3 button {
     padding: 1.5rem;
   }
 
-  .form {
-    padding: 0 22rem;
+  footer .footer .container ul li h3 button span {
+    font-size: 1.5rem;
+    font-weight: 400;
+  }
+}
+
+@media(min-width:1440px){
+    footer .footer {
+    max-width: calc(83% - 6rem);
   }
 }

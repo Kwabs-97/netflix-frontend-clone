@@ -50,23 +50,24 @@ function FAQS() {
   return (
     <footer>
       <div className={classes.footer}>
-        <h2>Frequently Asked Questions</h2>
+        <div>
+          <div className={classes.container}>
+            <h2>Frequently Asked Questions</h2>
+            <ul>
+              {faqsData.map((faq, index) => (
+                <FAQItem
+                  key={index}
+                  question={faq.question}
+                  answer={faq.answer}
+                  isActive={index === activeIndex}
+                  onToggle={() => toggleHandler(index)}
+                />
+              ))}
+              {/* Render first FAQ item */}
+            </ul>
 
-        <div className={classes.container}>
-          <ul>
-            {faqsData.map((faq, index) => (
-              <FAQItem
-                key={index}
-                question={faq.question}
-                answer={faq.answer}
-                isActive={index === activeIndex}
-                onToggle={() => toggleHandler(index)}
-              />
-            ))}
-            {/* Render first FAQ item */}
-          </ul>
-
-          <Newsletter />
+            <Newsletter />
+          </div>
         </div>
       </div>
     </footer>

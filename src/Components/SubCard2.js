@@ -6,16 +6,18 @@ import profileImg from "../assets/AAAABejKYujIIDQciqmGJJ8BtXkYKKTi5jiqexltvN1Ymv
 
 function SubCard2() {
   return (
-    <aside className={classes.subcardContainer}>
-      <div className={classes.header}>
-        <h2>Create profiles for kids</h2>
-        <p>
-          Send kids on adventure with their favorite characters in a space made just for them--free
-          with your membership
-        </p>
-      </div>
-      <div className={classes.main}>
-        <img src={profileImg} alt="" />
+    <aside className={classes.profile}>
+      <div className={classes.profileContainer}>
+        <div className={classes.heading}>
+          <h2>Create profiles for kids</h2>
+          <p>
+            Send kids on adventure with their favorite characters in a space made just for
+            them--free with your membership
+          </p>
+        </div>
+        <div className={classes.main}>
+          <img src={profileImg} alt="" />
+        </div>
       </div>
     </aside>
   );
