@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { useRef } from "react";
 
 import { useDispatch, useSelector } from "react-redux";
-import { setEmail } from "../store/reducers/formReducer";
+import { setEmail } from "../store/reducers/email-input";
 
 import netflixSVG from "../assets/netflix-svgrepo-com.svg";
 import nextSVG from "../assets/next-svgrepo-com.svg";
@@ -37,7 +37,7 @@ function MainNav() {
                 <img src={netflixSVG} alt="" />
               </span>
               <span>
-                <Link>Sign In</Link>
+                <Link to="/login">Sign In</Link>
               </span>
             </div>
           </nav>

@@ -8,12 +8,13 @@ import emailErrorSVG from "../assets/cancel-20px-svgrepo-com.svg";
 import nextSVG from "../assets/next-svgrepo-com.svg";
 
 import { useDispatch, useSelector } from "react-redux";
+
 import { setEmail } from "../store/reducers/email-input";
 
-import classes from "./Newsletter.module.css";
+import classes from "./emailForms.module.css";
 
-function Newsletter() {
-  const emailField = useSelector((state) => state.email.email);
+function EmailForms() {
+  const emailField = useSelector((state) => state.form.email);
 
   const dispatch = useDispatch();
 
@@ -34,15 +35,7 @@ function Newsletter() {
           <h5>Ready to watch? Enter your email to create or restart your membership.</h5>
           <div className={classes.inputContainer}>
             <div className={classes.emailAndErrorMessage}>
-              <div
-                className={` ${classes.container} ${
-                  emailField.errorMessage
-                    ? classes.isInvalid
-                    : emailField.isValid
-                    ? classes.isValid
-                    : ""
-                } `}
-              >
+              <div className={`${classes.container} `}>
                 <input
                   type="email"
                   name="email"
@@ -76,4 +69,4 @@ function Newsletter() {
   );
 }
 
-export default Newsletter;
+export default EmailForms;

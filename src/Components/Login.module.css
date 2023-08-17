@@ -1,0 +1,101 @@
+/** @format */
+
+.loginWrapper {
+  margin: 0;
+  min-height: 100%;
+  padding: 0;
+  position: relative;
+  z-index: 0;
+  background-color: #000;
+  color: #fff;
+}
+
+.loginWrapper .loginWrapperBackground {
+  background: url("../assets/loginWrapperBackground.jpg") no-repeat center;
+}
+
+.loginWrapper .loginHeader {
+  background: none;
+  border: 0;
+  display: flex;
+  flex-direction: row;
+}
+
+.loginWrapper .loginHeader a {
+  margin-left: 3%;
+  display: flex;
+}
+
+.loginWrapper .loginBody {
+  color: #333;
+  margin: 0 auto;
+  padding: 0 5%;
+}
+
+.loginBody .loginContent {
+  background-color: rgba(0, 0, 0, 0.75);
+  border-radius: 4px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  min-height: 515px;
+  padding: 20px 0 30px;
+  width: 100%;
+}
+
+.loginContent .loginFormMain {
+  flex-grow: 1;
+}
+
+.loginFormMain h1 {
+  font-size: 2rem;
+  color: white;
+  font-weight: 500;
+  margin-bottom: 0rem;
+  text-align: start;
+  margin-bottom: 28px;
+}
+
+.loginForm .emailContainer {
+  padding-bottom: 16px;
+  max-width: 100%;
+  position: relative;
+}
+
+.emailContainer .phoneContainer {
+  display: flex;
+  width: 100%;
+}
+
+.loginForm .emailContainer .label {
+  display: flex;
+  width: 100%;
+}
+.loginForm .emailContainer label input {
+  border: 0;
+  border-radius: 4px;
+  color: #fff;
+  height: 35px;
+  line-height: 50px;
+  padding: 16px 20px 0;
+  background: #333;
+  width: 100%;
+}
+
+.emailContainer label label {
+  color: #8c8c8c;
+  font-size: 14px;
+  left: 20px;
+  position: absolute;
+  top: 40%;
+  transform: translateY(-50%);
+  transition: font 0.1s ease, top 0.1s ease, transform 0.1s ease;
+}
+
+.emailContainer input:focus ~ label {
+  transform: translateY(-20px);
+  font-size: 12px;
+  margin-bottom: 10px;
+  transition: 250ms cubic-bezier(0.5, 0, 0.1, 1) 0s;
+}

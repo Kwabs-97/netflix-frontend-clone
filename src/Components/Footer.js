@@ -9,6 +9,7 @@ import FooterItems from "./FooterItems";
 
 import webSVG from "../assets/web-svgrepo-com.svg";
 import dropdownSVG from "../assets/dropdown-svgrepo-com (1).svg";
+import Login from "./Login";
 
 function Footer() {
   const links = [
@@ -122,6 +123,7 @@ function Footer() {
           </div>
         </div>
         <p>Netflix Ghana</p>
+        <Login />
       </div>
     </footer>
   );

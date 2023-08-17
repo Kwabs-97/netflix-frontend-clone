@@ -1,8 +1,6 @@
 /** @format */
 
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import nextSVG from "../assets/next-svgrepo-com.svg";
 
 import FAQItem from "./FAQItems"; // Import the newly created FAQItem component
 import classes from "./FAQS.module.css";
