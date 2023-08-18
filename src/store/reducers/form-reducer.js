@@ -10,7 +10,7 @@ const setErrorMessage = (value) => {
   if (typeof value === "string" && value.length < 5) {
     return "Please a valid email";
   }
-  if (typeof value === "string" && !/^\d+$/.test(value)) {
+  if (typeof value === "number" && value.length < 5) {
     return "Please enter a valid phone number";
   }
 };

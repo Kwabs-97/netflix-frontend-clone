@@ -88,7 +88,7 @@
   font-size: 14px;
   left: 20px;
   position: absolute;
-  top: 40%;
+  top: 30%;
   transform: translateY(-50%);
   transition: font 0.1s ease, top 0.1s ease, transform 0.1s ease;
 }
@@ -98,4 +98,8 @@
   font-size: 12px;
   margin-bottom: 10px;
   transition: 250ms cubic-bezier(0.5, 0, 0.1, 1) 0s;
+}
+.emailContainer .error {
+  color: #e87c03;
+  font-size: 1rem;
 }

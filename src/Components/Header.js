@@ -6,6 +6,7 @@ import { useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { setEmail } from "../store/reducers/email-input";
 
+
 import netflixSVG from "../assets/netflix-svgrepo-com.svg";
 import nextSVG from "../assets/next-svgrepo-com.svg";
 import classes from "./MainNav.module.css";
@@ -14,6 +15,9 @@ import emailErrorSVG from "../assets/cancel-20px-svgrepo-com.svg";
 import Newsletter from "./Newsletter";
 
 function MainNav() {
+
+
+
   const emailField = useSelector((state) => state.form.email);
 
   const dispatch = useDispatch();

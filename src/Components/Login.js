@@ -6,6 +6,8 @@ import { Link } from "react-router-dom";
 
 import { useDispatch, useSelector } from "react-redux";
 
+import { useForm } from "react-hook-form";
+
 import classes from "./Login.module.css";
 import loginWrapperBackground from "../assets/loginWrapperBackground.jpg";
 import NetflixSVG from "../assets/netflix-svgrepo-com.svg";
@@ -13,14 +15,24 @@ import { ReactSVG } from "react-svg";
 import { setEmailandPhone } from "../store/reducers/form-reducer";
 
 function Login() {
-  const emailField = useSelector((state) => state.form.email);
+  const form = useForm({
+    defaultValues: {
+      emailOrNumber: "",
+    },
+    mode: "onBlur",
+  });
 
-  const dispatch = useDispatch();
+  const { register, formState, handleSubmit } = form;
+  const { errors } = formState;
 
-  const handleEmailChange = (event) => {
-    const newEmail = event.target.value;
-    dispatch(setEmailandPhone(newEmail));
+  const onSubmit = (data) => {
+    console.log(data);
   };
+
+  // const handleEmailChange = (event) => {
+  //   const newEmail = event.target.value;
+  //   dispatch(setEmailandPhone(newEmail));
+  // };
   return (
     <div className={classes.loginWrapper}>
       <div className={classes.loginWrapperBackground}></div>
@@ -35,17 +47,26 @@ function Login() {
           <div className={classes.loginContent}>
             <div className={classes.loginFormMain}>
               <h1 className={classes.loginPageTitle}>Sign In</h1>
-              <form action="" className={classes.loginForm}>
+              <form action="" className={classes.loginForm} onSubmit={handleSubmit(onSubmit)}>
                 <div className={classes.emailContainer}>
                   <div className={classes.inputPlacement}>
                     <div className={classes.phoneContainer}>
                       <label htmlFor="inputID" className={classes.label}>
-                        <input type="text" autoComplete="email" onChange={handleEmailChange} />
+                        <input
+                          type="text"
+                          {...register("emailOrNumber", {
+                            pattern: {
+                              value:
+                                /^[a-zA-Z0-9]+(?:\.[a-zA-Z0-9]+)*@[a-zA-Z0-9]+(?:\.[a-zA-Z0-9]+)*$/,
+                              message: "Please enter your email or phone number",
+                            },
+                          })}
+                        />
                         <label htmlFor="">Email or Phone Number</label>
                       </label>
                     </div>
                   </div>
-                  {emailField.errorMessage && <div> {emailField.errorMessage} </div>}
+                  <p className={classes.error}>{errors.emailOrNumber?.message}</p>
                 </div>
               </form>
             </div>
