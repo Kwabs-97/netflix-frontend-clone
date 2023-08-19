@@ -6,6 +6,7 @@ import FAQItem from "./FAQItems"; // Import the newly created FAQItem component
 import classes from "./FAQS.module.css";
 
 import Newsletter from "./Newsletter";
+import Divider from "./Divider";
 
 function FAQS() {
   const faqsData = [
@@ -46,29 +47,32 @@ function FAQS() {
     setActiveIndex((prevIndex) => (prevIndex === index ? null : index));
   };
   return (
-    <footer>
-      <div className={classes.footer}>
-        <div>
-          <div className={classes.container}>
-            <h2>Frequently Asked Questions</h2>
-            <ul>
-              {faqsData.map((faq, index) => (
-                <FAQItem
-                  key={index}
-                  question={faq.question}
-                  answer={faq.answer}
-                  isActive={index === activeIndex}
-                  onToggle={() => toggleHandler(index)}
-                />
-              ))}
-              {/* Render first FAQ item */}
-            </ul>
+    <>
+      <footer>
+        <div className={classes.footer}>
+          <div>
+            <div className={classes.container}>
+              <h2>Frequently Asked Questions</h2>
+              <ul>
+                {faqsData.map((faq, index) => (
+                  <FAQItem
+                    key={index}
+                    question={faq.question}
+                    answer={faq.answer}
+                    isActive={index === activeIndex}
+                    onToggle={() => toggleHandler(index)}
+                  />
+                ))}
+                {/* Render first FAQ item */}
+              </ul>
 
-            <Newsletter />
+              <Newsletter />
+            </div>
           </div>
         </div>
-      </div>
-    </footer>
+      </footer>
+      <Divider />
+    </>
   );
 }
 

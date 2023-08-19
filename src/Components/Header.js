@@ -3,9 +3,10 @@
 import { Link } from "react-router-dom";
 import { useRef } from "react";
 
+import Divider from "./Divider";
+
 import { useDispatch, useSelector } from "react-redux";
 import { setEmail } from "../store/reducers/email-input";
-
 
 import netflixSVG from "../assets/netflix-svgrepo-com.svg";
 import nextSVG from "../assets/next-svgrepo-com.svg";
@@ -15,9 +16,6 @@ import emailErrorSVG from "../assets/cancel-20px-svgrepo-com.svg";
 import Newsletter from "./Newsletter";
 
 function MainNav() {
-
-
-
   const emailField = useSelector((state) => state.form.email);
 
   const dispatch = useDispatch();
@@ -55,6 +53,7 @@ function MainNav() {
           </main>
         </div>
         <div className={classes.gradientOverlay}></div>
+        <Divider />
       </header>
     </>
   );
