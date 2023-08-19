@@ -92,14 +92,14 @@
   transform: translateY(-50%);
   transition: font 0.1s ease, top 0.1s ease, transform 0.1s ease;
   font-size: 10px;
-  top: 25%;
+  top: 20%;
   left: 20px;
 }
 
 .emailContainer .inputPlaceholder {
   color: #8c8c8c;
   font-size: 14px;
-  left:20px;
+  left: 20px;
   position: absolute;
   top: 30%;
   transform: translateY(-50%);
