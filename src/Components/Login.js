@@ -49,24 +49,16 @@ function Login() {
               <h1 className={classes.loginPageTitle}>Sign In</h1>
               <form action="" className={classes.loginForm} onSubmit={handleSubmit(onSubmit)}>
                 <div className={classes.emailContainer}>
-                  <div className={classes.inputPlacement}>
-                    <div className={classes.phoneContainer}>
-                      <label htmlFor="inputID" className={classes.label}>
-                        <input
-                          type="text"
-                          {...register("emailOrNumber", {
-                            pattern: {
-                              value:
-                                /^[a-zA-Z0-9]+(?:\.[a-zA-Z0-9]+)*@[a-zA-Z0-9]+(?:\.[a-zA-Z0-9]+)*$/,
-                              message: "Please enter your email or phone number",
-                            },
-                          })}
-                        />
-                        <label htmlFor="">Email or Phone Number</label>
-                      </label>
-                    </div>
-                  </div>
-                  <p className={classes.error}>{errors.emailOrNumber?.message}</p>
+                  <label>
+                    <input type="text" className={classes.emailInput} />
+                    <label className={classes.inputPlaceholder}>Email or Phone Number</label>
+                  </label>
+                </div>
+                <div className={classes.emailContainer}>
+                  <label>
+                    <input type="password" className={classes.emailInput} />
+                    <label className={classes.inputPlaceholder}>Password</label>
+                  </label>
                 </div>
               </form>
             </div>

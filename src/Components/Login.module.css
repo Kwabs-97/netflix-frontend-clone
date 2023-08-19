@@ -58,68 +58,50 @@
 }
 
 .loginForm .emailContainer {
-  padding-bottom: 16px;
   max-width: 100%;
   position: relative;
+  padding-bottom: 16px;
 }
 
-.emailContainer .phoneContainer {
-  display: flex;
-  width: 100%;
-}
-
-.loginForm .emailContainer .label {
-  display: flex;
-  width: 100%;
-}
-.loginForm .emailContainer label input {
+.emailContainer .emailInput {
+  background-color: #333;
   border: 0;
   border-radius: 4px;
   color: #fff;
-  height: 35px;
+  height: 44px;
   line-height: 50px;
-  padding: 16px 24px 0;
-  background: #333;
   width: 100%;
-  font-size: 1rem;
+  box-sizing: border-box;
+  padding: 16px 20px 0;
 }
 
-.emailContainer label label {
-  position: absolute;
-  z-index: 1;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  transition-property: top, font-size, line-height;
-  transition-duration: 250ms;
-  pointer-events: none;
-  font-size: 1rem;
-  transition-timing-function: cubic-bezier(0.9, 0, 0.51, 1);
-  color: #8c8c8c;
-  line-height: 1.5rem;
-  left: -1rem;
-  right: 1rem;
-  top: 0.75rem;
+.emailContainer .emailInput:focus {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 1px solid #8c8c8c;
+  border-radius: 2px;
+  box-sizing: border-box;
+  display: block;
+  font-size: 16px;
+  height: 50px;
+  padding: 16px 20px 0;
 }
 
-.emailContainer input:focus ~ label {
-  position: absolute;
-  z-index: 1;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  transition-property: top, font-size, line-height;
-  transition-duration: 250ms;
-  pointer-events: none;
-  font-size: 0.8rem;
-  transition-timing-function: cubic-bezier(0.9, 0, 0.51, 1);
-  color: #8c8c8c;
-  line-height: 1.5rem;
-  left: -3rem;
-  right: 1rem;
-  top: 0.2rem;
+.emailContainer .emailInput:focus ~ label {
+  transform: translateY(-50%);
+  transition: font 0.1s ease, top 0.1s ease, transform 0.1s ease;
+  font-size: 10px;
+  top: 25%;
+  left: 20px;
 }
-.emailContainer .error {
-  color: #e87c03;
-  font-size: 1rem;
+
+.emailContainer .inputPlaceholder {
+  color: #8c8c8c;
+  font-size: 14px;
+  left:20px;
+  position: absolute;
+  top: 30%;
+  transform: translateY(-50%);
+  transition: font 0.1s ease, top 0.1s ease, transform 0.1s ease;
 }
