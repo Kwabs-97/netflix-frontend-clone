@@ -37,7 +37,7 @@ function Login() {
     <div className={classes.loginWrapper}>
       <div className={classes.loginWrapperBackground}></div>
       <header className={classes.loginHeader}>
-        <Link>
+        <Link to="/">
           {" "}
           <ReactSVG src={NetflixSVG} />
         </Link>

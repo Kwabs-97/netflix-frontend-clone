@@ -123,7 +123,6 @@ function Footer() {
           </div>
         </div>
         <p>Netflix Ghana</p>
-        <Login />
       </div>
     </footer>
   );
