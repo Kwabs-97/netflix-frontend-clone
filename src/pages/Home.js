@@ -9,23 +9,20 @@ import SubCard from "../Components/SubCard";
 import SubCard2 from "../Components/SubCard2";
 import FAQS from "../Components/FAQS";
 import Footer from "../Components/Footer";
+import { Outlet } from "react-router-dom";
 
 function Home() {
   return (
     <>
       <Header />
-
+      <Outlet />
       <Hero1 />
-
       <DownloadsHero />
-
       <SubCard />
-
       <SubCard2 />
-
       <FAQS />
-
       <Footer />
+  
     </>
   );
 }
