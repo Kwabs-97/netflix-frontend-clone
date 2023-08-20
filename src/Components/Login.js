@@ -60,7 +60,19 @@ function Login() {
                     <label className={classes.inputPlaceholder}>Password</label>
                   </label>
                 </div>
-                <Link>Sign In</Link>
+                <Link className={classes.signInBtn}>Sign In</Link>
+                <div className={classes.formHelp}>
+                  <div className={classes.rememberMe}>
+                    <div className={classes.customCheckbox}>
+                      <input type="checkbox" id="myCheckbox" className={classes.hiddenCheckbox} defaultChecked />
+                      <label htmlFor="myCheckbox" className={classes.visibleCheckbox}></label>
+                      <label htmlFor="myCheckbox" className={classes.checkboxLabel}>
+                        Remember me
+                      </label>
+                    </div>
+                  </div>
+                  <Link>Need Help?</Link>
+                </div>
               </form>
             </div>
             <div></div>
