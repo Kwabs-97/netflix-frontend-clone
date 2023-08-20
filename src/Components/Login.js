@@ -13,6 +13,7 @@ import loginWrapperBackground from "../assets/loginWrapperBackground.jpg";
 import NetflixSVG from "../assets/netflix-svgrepo-com.svg";
 import { ReactSVG } from "react-svg";
 import { setEmailandPhone } from "../store/reducers/form-reducer";
+import Divider from "./Divider";
 
 function Login() {
   const form = useForm({
@@ -64,7 +65,12 @@ function Login() {
                 <div className={classes.formHelp}>
                   <div className={classes.rememberMe}>
                     <div className={classes.customCheckbox}>
-                      <input type="checkbox" id="myCheckbox" className={classes.hiddenCheckbox} defaultChecked />
+                      <input
+                        type="checkbox"
+                        id="myCheckbox"
+                        className={classes.hiddenCheckbox}
+                        defaultChecked
+                      />
                       <label htmlFor="myCheckbox" className={classes.visibleCheckbox}></label>
                       <label htmlFor="myCheckbox" className={classes.checkboxLabel}>
                         Remember me
@@ -74,12 +80,34 @@ function Login() {
                   <Link>Need Help?</Link>
                 </div>
               </form>
+              <div className={classes.otherForm}>
+                <div className={classes.signup}>
+                  New to Netflix?
+                  <Link className={classes.signupLink}>Sign up now</Link>
+                </div>
+                <div className={classes.terms}>
+                  <p>
+                    <span>
+                      This page is protected by Google reCAPTCHA to ensure you're not a bot.
+                    </span>
+                    <Link> Learn more.</Link>
+                  </p>
+                </div>
+              </div>
             </div>
-            <div></div>
           </div>
         </div>
       </main>
-      <footer className={classes.loginFooter}></footer>
+
+      <footer className={classes.footerWrapper}>
+        <div className={classes.footerDivider}></div>
+        <div className={classes.siteFooter}>
+          <p className={classes.footerTop}>
+            <Link>Got Questions</Link>
+          </p>
+
+        </div>
+      </footer>
     </div>
   );
 }

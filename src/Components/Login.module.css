@@ -21,6 +21,9 @@
   flex-direction: row;
 }
 
+.loginWrapper a {
+  text-decoration: none;
+}
 .loginWrapper .loginHeader a {
   margin-left: 3%;
   display: flex;
@@ -178,4 +181,57 @@
 
 input[type="checkbox"]:not(:checked) ~ .checkboxLabel::before {
   display: none;
+}
+
+.otherForm {
+  padding-bottom: 5rem;
+}
+
+.signup {
+  color: #737373;
+  font-size: 16px;
+  font-weight: 400;
+  margin-top: 16px;
+}
+
+.signup a {
+  color: white;
+  padding: 0 4px;
+}
+
+.terms {
+  color: #8c8c8c;
+  font-size: 13px;
+  margin-top: 11px;
+}
+
+.terms a {
+  color: #0071eb;
+  cursor: pointer;
+}
+
+.footerWrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.footerDivider {
+  border-top: 1px solid #737373;
+  height: 0;
+  width: 100%;
+}
+
+.siteFooter {
+  margin: 0 auto;
+  padding-top: 30px;
+  width: 90%;
+  padding: 30px 0;
+  color: #737373;
+  display: flex;
+  flex-direction: column;
+}
+
+.siteFooter .footerTop {
+  margin: 0 0 30px;
+  padding: 0;
 }
