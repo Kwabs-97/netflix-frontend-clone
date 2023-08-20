@@ -211,6 +211,7 @@ input[type="checkbox"]:not(:checked) ~ .checkboxLabel::before {
 }
 
 .footerWrapper {
+  padding-bottom: 20px;
   display: flex;
   flex-direction: column;
 }
@@ -234,4 +235,16 @@ input[type="checkbox"]:not(:checked) ~ .checkboxLabel::before {
 .siteFooter .footerTop {
   margin: 0 0 30px;
   padding: 0;
+  text-align: left;
+}
+
+.siteFooter .linksContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  text-align: left;
+}
+
+.siteFooter a {
+  color: #737373;
 }

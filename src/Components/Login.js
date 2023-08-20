@@ -13,9 +13,37 @@ import loginWrapperBackground from "../assets/loginWrapperBackground.jpg";
 import NetflixSVG from "../assets/netflix-svgrepo-com.svg";
 import { ReactSVG } from "react-svg";
 import { setEmailandPhone } from "../store/reducers/form-reducer";
-import Divider from "./Divider";
+
+import FooterLinks from "./Footer-items";
 
 function Login() {
+  const footerLinks = [
+    {
+      name: "FAQ",
+      link: "https://help.netflix.com/support/412",
+    },
+    {
+      name: "help Center",
+      link: "https://help.netflix.com/en/",
+    },
+    {
+      name: "Terms of Use",
+      link: "https://help.netflix.com/legal/termsofuse",
+    },
+    {
+      name: "Privacy",
+      link: "https://help.netflix.com/legal/privacy",
+    },
+    {
+      name: "Cookie Preferences",
+      link: "https://www.netflix.com/gh/#",
+    },
+    {
+      name: "Cooperative Information",
+      link: "https://help.netflix.com/legal/corpinfo",
+    },
+  ];
+
   const form = useForm({
     defaultValues: {
       emailOrNumber: "",
@@ -30,10 +58,6 @@ function Login() {
     console.log(data);
   };
 
-  // const handleEmailChange = (event) => {
-  //   const newEmail = event.target.value;
-  //   dispatch(setEmailandPhone(newEmail));
-  // };
   return (
     <div className={classes.loginWrapper}>
       <div className={classes.loginWrapperBackground}></div>
@@ -103,9 +127,13 @@ function Login() {
         <div className={classes.footerDivider}></div>
         <div className={classes.siteFooter}>
           <p className={classes.footerTop}>
-            <Link>Got Questions</Link>
+            <Link>Got Questions, Contact us.</Link>
           </p>
-
+          <ul className={classes.linksContainer}>
+            {footerLinks.map((link) => (
+              <FooterLinks name={link.name} link={link.link} />
+            ))}
+          </ul>
         </div>
       </footer>
     </div>
