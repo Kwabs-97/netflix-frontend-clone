@@ -105,3 +105,18 @@
   transform: translateY(-50%);
   transition: font 0.1s ease, top 0.1s ease, transform 0.1s ease;
 }
+
+.loginForm a {
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 500;
+  margin: 24px 0 12px;
+  background: #e50914;
+  width: 100%;
+
+  display: block;
+  line-height: 50px;
+  text-decoration: none;
+  text-align: center;
+  color: white;
+}

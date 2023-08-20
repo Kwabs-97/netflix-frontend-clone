@@ -60,6 +60,7 @@ function Login() {
                     <label className={classes.inputPlaceholder}>Password</label>
                   </label>
                 </div>
+                <Link>Sign In</Link>
               </form>
             </div>
             <div></div>
