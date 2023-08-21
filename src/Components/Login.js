@@ -26,8 +26,7 @@ function Login() {
   const inputClassName =
     inputValue !== "" ? `${classes.emailInput} ${classes.hasValue} ` : classes.emailInput;
 
-  console.log(inputClassName, "inputClassName");
-  console.log(classes.hasValue, "classes.hasValue");
+ 
 
   //data for footer Links
   const footerLinks = [
