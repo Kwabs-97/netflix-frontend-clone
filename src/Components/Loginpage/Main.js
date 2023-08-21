@@ -7,15 +7,31 @@ import { Link } from "react-router-dom";
 import classes from "./Main.module.css";
 
 function Main() {
-  //Managing input state for setting placeholder
+  //Managing email input state for setting placeholder
 
-  const [inputValue, setInputValue] = useState("");
-  const onChangeHandler = (event) => {
-    setInputValue(event.target.value);
+  const [emailInputValue, setemailInputValue] = useState("");
+
+  const emailInputOnChangeHandler = (event) => {
+    setemailInputValue(event.target.value);
   };
-  //setting className for positioning placeholder
-  const inputClassName =
-    inputValue !== "" ? `${classes.emailInput} ${classes.hasValue} ` : classes.emailInput;
+
+  //Managing password input state for setting placeholder
+
+  const [passwordInputValue, setPasswordInputValue] = useState("");
+
+  const passwordInputOnChangeHandler = (event) => {
+    setPasswordInputValue(event.target.value);
+  };
+
+  console.log(passwordInputValue);
+
+  const emailInputClassName =
+    emailInputValue !== "" ? `${classes.emailInput} ${classes.emailHasValue} ` : classes.emailInput;
+
+  const passwordInputClassName =
+    passwordInputValue !== ""
+      ? `${classes.passwordInput} ${classes.passwordHasValue} `
+      : classes.passwordInput;
 
   return (
     <main className={classes.loginBody}>
@@ -26,13 +42,21 @@ function Main() {
             <form action="" className={classes.loginForm}>
               <div className={classes.emailContainer}>
                 <label>
-                  <input type="text" className={inputClassName} onChange={onChangeHandler} />
+                  <input
+                    type="text"
+                    className={emailInputClassName}
+                    onChange={emailInputOnChangeHandler}
+                  />
                   <label className={classes.inputPlaceholder}>Email or Phone Number</label>
                 </label>
               </div>
-              <div className={classes.emailContainer}>
+              <div className={classes.passwordContainer}>
                 <label>
-                  <input type="password" className={inputClassName} onChange={onChangeHandler} />
+                  <input
+                    type="password"
+                    className={passwordInputClassName}
+                    onChange={passwordInputOnChangeHandler}
+                  />
                   <label className={classes.inputPlaceholder}>Password</label>
                 </label>
               </div>

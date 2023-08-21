@@ -31,6 +31,7 @@
   margin-bottom: 28px;
 }
 
+/* email input styles*/
 .loginForm .emailContainer {
   max-width: 100%;
   position: relative;
@@ -80,6 +81,155 @@
   transition: font 0.1s ease, top 0.1s ease, transform 0.1s ease;
 }
 
+.emailContainer {
+  max-width: 100%;
+  position: relative;
+  padding-bottom: 16px;
+}
+
+.emailContainer .emailInput {
+  background-color: #333;
+  border: 0;
+  border-radius: 4px;
+  color: #fff;
+  height: 50px;
+  font-size: 16px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 16px 20px 0;
+}
+
+.emailContainer .emailInput:focus {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 1px solid #8c8c8c;
+  border-radius: 2px;
+  box-sizing: border-box;
+  display: block;
+  font-size: 16px;
+  height: 50px;
+  padding: 16px 20px 0;
+}
+
+.emailContainer .emailInput:focus ~ label {
+  transform: translateY(-50%);
+  transition: font 0.1s ease, top 0.1s ease, transform 0.1s ease;
+  font-size: 10px;
+  top: 20%;
+  left: 20px;
+}
+
+.emailContainer .inputPlaceholder {
+  color: #8c8c8c;
+  font-size: 14px;
+  left: 20px;
+  position: absolute;
+  top: 30%;
+  transform: translateY(-50%);
+  transition: font 0.1s ease, top 0.1s ease, transform 0.1s ease;
+}
+
+/*password input styles*/
+.loginForm .passwordContainer {
+  max-width: 100%;
+  position: relative;
+  padding-bottom: 16px;
+}
+
+.passwordContainer .passwordInput {
+  background-color: #333;
+  border: 0;
+  border-radius: 4px;
+  color: #fff;
+  height: 50px;
+  font-size: 16px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 16px 20px 0;
+}
+
+.passwordContainer .passwordInput:focus {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 1px solid #8c8c8c;
+  border-radius: 2px;
+  box-sizing: border-box;
+  display: block;
+  font-size: 16px;
+  height: 50px;
+  padding: 16px 20px 0;
+}
+
+.passwordContainer .passwordInput:focus ~ label {
+  transform: translateY(-50%);
+  transition: font 0.1s ease, top 0.1s ease, transform 0.1s ease;
+  font-size: 10px;
+  top: 20%;
+  left: 20px;
+}
+
+.passwordContainer .inputPlaceholder {
+  color: #8c8c8c;
+  font-size: 14px;
+  left: 20px;
+  position: absolute;
+  top: 30%;
+  transform: translateY(-50%);
+  transition: font 0.1s ease, top 0.1s ease, transform 0.1s ease;
+}
+
+.passwordContainer {
+  max-width: 100%;
+  position: relative;
+  padding-bottom: 16px;
+}
+
+.passwordContainer .passwordInput {
+  background-color: #333;
+  border: 0;
+  border-radius: 4px;
+  color: #fff;
+  height: 50px;
+  font-size: 16px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 16px 20px 0;
+}
+
+.passwordContainer .passwordInput:focus {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 1px solid #8c8c8c;
+  border-radius: 2px;
+  box-sizing: border-box;
+  display: block;
+  font-size: 16px;
+  height: 50px;
+  padding: 16px 20px 0;
+}
+
+.passwordContainer .passwordInput:focus ~ label {
+  transform: translateY(-50%);
+  transition: font 0.1s ease, top 0.1s ease, transform 0.1s ease;
+  font-size: 10px;
+  top: 20%;
+  left: 20px;
+}
+
+.passwordContainer .inputPlaceholder {
+  color: #8c8c8c;
+  font-size: 14px;
+  left: 20px;
+  position: absolute;
+  top: 30%;
+  transform: translateY(-50%);
+  transition: font 0.1s ease, top 0.1s ease, transform 0.1s ease;
+}
+
+/*Login Form Styles*/
 .loginForm .signInBtn {
   border-radius: 4px;
   font-size: 16px;
@@ -181,7 +331,15 @@ input[type="checkbox"]:not(:checked) ~ .checkboxLabel::before {
   cursor: pointer;
 }
 
-input.hasValue:not(:focus) ~ label {
+input.emailHasValue:not(:focus) ~ label {
+  transform: translateY(-50%);
+  transition: font 0.1s ease, top 0.1s ease, transform 0.1s ease;
+  font-size: 10px;
+  top: 20%;
+  left: 20px;
+}
+
+input.passwordHasValue:not(:focus) ~ label {
   transform: translateY(-50%);
   transition: font 0.1s ease, top 0.1s ease, transform 0.1s ease;
   font-size: 10px;
