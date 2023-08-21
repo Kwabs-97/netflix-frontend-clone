@@ -1,22 +1,35 @@
 /** @format */
 
 import React from "react";
+import { useState } from "react";
 
 import { Link } from "react-router-dom";
 
-import { useDispatch, useSelector } from "react-redux";
-
-import { useForm } from "react-hook-form";
+// import { useForm } from "react-hook-form";
 
 import classes from "./Login.module.css";
-import loginWrapperBackground from "../assets/loginWrapperBackground.jpg";
+// import loginWrapperBackground from "../assets/loginWrapperBackground.jpg";
 import NetflixSVG from "../assets/netflix-svgrepo-com.svg";
 import { ReactSVG } from "react-svg";
-import { setEmailandPhone } from "../store/reducers/form-reducer";
 
 import FooterLinks from "./Footer-items";
 
 function Login() {
+  //Managing input state for setting placeholder
+
+  const [inputValue, setInputValue] = useState("");
+  const onChangeHandler = (event) => {
+    setInputValue(event.target.value);
+  };
+
+  //setting className for positioning placeholder
+  const inputClassName =
+    inputValue !== "" ? `${classes.emailInput} ${classes.hasValue} ` : classes.emailInput;
+
+  console.log(inputClassName, "inputClassName");
+  console.log(classes.hasValue, "classes.hasValue");
+
+  //data for footer Links
   const footerLinks = [
     {
       name: "FAQ",
@@ -44,20 +57,6 @@ function Login() {
     },
   ];
 
-  const form = useForm({
-    defaultValues: {
-      emailOrNumber: "",
-    },
-    mode: "onBlur",
-  });
-
-  const { register, formState, handleSubmit } = form;
-  const { errors } = formState;
-
-  const onSubmit = (data) => {
-    console.log(data);
-  };
-
   return (
     <div className={classes.loginWrapper}>
       <div className={classes.loginWrapperBackground}></div>
@@ -72,16 +71,16 @@ function Login() {
           <div className={classes.loginContent}>
             <div className={classes.loginFormMain}>
               <h1 className={classes.loginPageTitle}>Sign In</h1>
-              <form action="" className={classes.loginForm} onSubmit={handleSubmit(onSubmit)}>
+              <form action="" className={classes.loginForm}>
                 <div className={classes.emailContainer}>
                   <label>
-                    <input type="text" className={classes.emailInput} />
+                    <input type="text" className={inputClassName} onChange={onChangeHandler} />
                     <label className={classes.inputPlaceholder}>Email or Phone Number</label>
                   </label>
                 </div>
                 <div className={classes.emailContainer}>
                   <label>
-                    <input type="password" className={classes.emailInput} />
+                    <input type="password" className={inputClassName} onChange={onChangeHandler} />
                     <label className={classes.inputPlaceholder}>Password</label>
                   </label>
                 </div>

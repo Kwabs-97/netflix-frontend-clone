@@ -247,4 +247,13 @@ input[type="checkbox"]:not(:checked) ~ .checkboxLabel::before {
 
 .siteFooter a {
   color: #737373;
+  font-size: 13px;
+}
+
+input.hasValue:not(:focus) ~ label {
+  transform: translateY(-50%);
+  transition: font 0.1s ease, top 0.1s ease, transform 0.1s ease;
+  font-size: 10px;
+  top: 20%;
+  left: 20px;
 }
