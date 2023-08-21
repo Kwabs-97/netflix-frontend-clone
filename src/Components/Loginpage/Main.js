@@ -58,7 +58,9 @@ function Main() {
             <div className={classes.otherForm}>
               <div className={classes.signup}>
                 New to Netflix?
-                <Link className={classes.signupLink}>Sign up now</Link>
+                <Link className={classes.signupLink} to="/">
+                  Sign up now
+                </Link>
               </div>
               <div className={classes.terms}>
                 <p>
