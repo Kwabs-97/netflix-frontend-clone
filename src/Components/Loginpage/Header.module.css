@@ -1,0 +1,12 @@
+/** @format */
+
+.loginHeader {
+  background: none;
+  border: 0;
+  display: flex;
+  flex-direction: row;
+}
+.loginHeader a {
+  margin-left: 3%;
+  display: flex;
+}
