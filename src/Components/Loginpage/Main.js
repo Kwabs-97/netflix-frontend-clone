@@ -25,7 +25,7 @@ function Main() {
     setInputFocused(!inputFocused);
   };
 
-  //Handling password visibility and conditionally rendering input text 
+  //Handling password visibility and conditionally rendering input text
   const togglePasswordVisibity = () => {
     setPasswordVisible(!passwordVisible);
   };
@@ -34,6 +34,8 @@ function Main() {
   const passwordInputOnChangeHandler = (event) => {
     setPasswordInputValue(event.target.value);
   };
+
+  //Setting password error message
 
   const emailInputClassName =
     emailInputValue !== "" ? `${classes.emailInput} ${classes.emailHasValue} ` : classes.emailInput;
@@ -82,6 +84,12 @@ function Main() {
                     >
                       {passwordVisible ? "HIDE" : "SHOW"}
                     </button>
+                    {inputFocused && passwordInputValue.length < 4 && (
+                      <p className={classes.passwordErrorMsg}>
+                        {" "}
+                        Your password must contain between 40 and 60 characters
+                      </p>
+                    )}
                   </label>
                 </div>
               </div>

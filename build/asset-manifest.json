@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.2d057004.css",
-    "main.js": "/static/js/main.535f6291.js",
+    "main.css": "/static/css/main.834caa7c.css",
+    "main.js": "/static/js/main.46f270fe.js",
     "static/media/AAAABejKYujIIDQciqmGJJ8BtXkYKKTi5jiqexltvN1YmvXYIfX8B9CYwooUSIzOKneblRFthZAFsYLMgKMyNfeHwk16DmEkpIIcb6A3.png": "/static/media/AAAABejKYujIIDQciqmGJJ8BtXkYKKTi5jiqexltvN1YmvXYIfX8B9CYwooUSIzOKneblRFthZAFsYLMgKMyNfeHwk16DmEkpIIcb6A3.6fd4253559d520f03d4d.png",
     "static/media/GH-en-20230731-popsignuptwoweeks-perspective_alpha_website_small.jpg": "/static/media/GH-en-20230731-popsignuptwoweeks-perspective_alpha_website_small.c1d5c112009afc5e4c38.jpg",
     "static/media/mobile-0819.jpg": "/static/media/mobile-0819.063578d5b6d5ab4155ec.jpg",
@@ -16,11 +16,11 @@
     "static/media/next-svgrepo-com.svg": "/static/media/next-svgrepo-com.6580aa2145aed0091f32c86180ecfb68.svg",
     "static/media/dropdown-svgrepo-com (1).svg": "/static/media/dropdown-svgrepo-com (1).e628c0941e69f2b91fcbd2044e9e4e34.svg",
     "static/media/plus-svgrepo-com.svg": "/static/media/plus-svgrepo-com.58437eba041fc0d38d620541abae8d01.svg",
-    "main.2d057004.css.map": "/static/css/main.2d057004.css.map",
-    "main.535f6291.js.map": "/static/js/main.535f6291.js.map"
+    "main.834caa7c.css.map": "/static/css/main.834caa7c.css.map",
+    "main.46f270fe.js.map": "/static/js/main.46f270fe.js.map"
   },
   "entrypoints": [
-    "static/css/main.2d057004.css",
-    "static/js/main.535f6291.js"
+    "static/css/main.834caa7c.css",
+    "static/js/main.46f270fe.js"
   ]
 }
