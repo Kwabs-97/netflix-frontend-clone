@@ -3,17 +3,14 @@
 import React from "react";
 import { useState } from "react";
 
-import { Link } from "react-router-dom";
-
 // import { useForm } from "react-hook-form";
 
 import classes from "./Login.module.css";
 // import loginWrapperBackground from "../assets/loginWrapperBackground.jpg";
 
-import FooterLinks from "./Footer-items";
-import Header from "./Loginpage/Header";
-import Main from "./Loginpage/Main";
-import Footer from "./Loginpage/Footer";
+import Header from "../../Components/Loginpage/Header";
+import Main from "../../Components/Loginpage/Main";
+import Footer from "../../Components/Loginpage/Footer";
 
 function Login() {
   //Managing input state for setting placeholder

@@ -3,21 +3,17 @@
 import { Link } from "react-router-dom";
 import { useRef } from "react";
 
-import Divider from "./Divider";
+import Divider from "../../../features/Divider";
 
 import { useDispatch, useSelector } from "react-redux";
-import { setEmail } from "../store/reducers/email-input";
+import { setEmail } from "../../../store/reducers/email-input";
 
-import netflixSVG from "../assets/netflix-svgrepo-com.svg";
-import nextSVG from "../assets/next-svgrepo-com.svg";
+import netflixSVG from "../../../assets/netflix-svgrepo-com.svg";
 import classes from "./MainNav.module.css";
-import emailErrorSVG from "../assets/cancel-20px-svgrepo-com.svg";
 
-import Newsletter from "./Newsletter";
+import Newsletter from "../../../features/Newsletter";
 
 function MainNav() {
-  const emailField = useSelector((state) => state.form.email);
-
   const dispatch = useDispatch();
 
   const inputRef = useRef(null);

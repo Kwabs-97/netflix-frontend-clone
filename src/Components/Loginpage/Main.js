@@ -6,6 +6,10 @@ import { Link } from "react-router-dom";
 
 import classes from "./Main.module.css";
 
+const formInput = React.memo(() => {
+  
+})
+
 function Main() {
   //Managing email input state for setting placeholder
 
@@ -16,14 +20,22 @@ function Main() {
   };
 
   //Managing password input state for setting placeholder
-
+  const [passwordVisible, setPasswordVisible] = useState(false);
+  const [inputFocused, setInputFocused] = useState(false);
   const [passwordInputValue, setPasswordInputValue] = useState("");
+
+  //Handling password Input is Focused
+  const handleInputFocus = () => {
+    setInputFocused(!inputFocused);
+  };
+
+  const togglePasswordVisibity = () => {
+    setPasswordVisible(!passwordVisible);
+  };
 
   const passwordInputOnChangeHandler = (event) => {
     setPasswordInputValue(event.target.value);
   };
-
-  console.log(passwordInputValue);
 
   const emailInputClassName =
     emailInputValue !== "" ? `${classes.emailInput} ${classes.emailHasValue} ` : classes.emailInput;
@@ -40,25 +52,36 @@ function Main() {
           <div className={classes.loginFormMain}>
             <h1 className={classes.loginPageTitle}>Sign In</h1>
             <form action="" className={classes.loginForm}>
-              <div className={classes.emailContainer}>
-                <label>
-                  <input
-                    type="text"
-                    className={emailInputClassName}
-                    onChange={emailInputOnChangeHandler}
-                  />
-                  <label className={classes.inputPlaceholder}>Email or Phone Number</label>
-                </label>
+              <div className={classes.emailData}>
+                <div className={classes.emailContainer}>
+                  <label>
+                    <input
+                      type="text"
+                      className={emailInputClassName}
+                      onChange={emailInputOnChangeHandler}
+                    />
+
+                    <label className={classes.inputPlaceholder}>Email or Phone Number</label>
+                  </label>
+                </div>
               </div>
-              <div className={classes.passwordContainer}>
-                <label>
-                  <input
-                    type="password"
-                    className={passwordInputClassName}
-                    onChange={passwordInputOnChangeHandler}
-                  />
-                  <label className={classes.inputPlaceholder}>Password</label>
-                </label>
+              <div className={classes.inputData}>
+                <div className={classes.passwordContainer}>
+                  <label>
+                    <input
+                      type="password"
+                      className={passwordInputClassName}
+                      onChange={passwordInputOnChangeHandler}
+                      onFocus={handleInputFocus}
+                      onBlur={handleInputFocus}
+                    />
+                    <label className={classes.inputPlaceholder}>Password</label>
+
+                    <button className={classes.passwordVisibleBtn} onClick={togglePasswordVisibity}>
+                      {passwordVisible ? "HIDE" : "SHOW"}
+                    </button>
+                  </label>
+                </div>
               </div>
               <Link className={classes.signInBtn}>Sign In</Link>
               <div className={classes.formHelp}>

@@ -2,9 +2,9 @@
 
 import React from "react";
 import classes from "./Hero1.module.css";
-import netflixTV from "../assets/tv.png";
+import netflixTV from "../../../assets/tv.png";
 
-import Divider from "./Divider";
+import Divider from "../../../features/Divider";
 
 function Hero1() {
   return (

@@ -5,8 +5,8 @@ import React, { useState } from "react";
 import FAQItem from "./FAQItems"; // Import the newly created FAQItem component
 import classes from "./FAQS.module.css";
 
-import Newsletter from "./Newsletter";
-import Divider from "./Divider";
+import Newsletter from "../../../features/Newsletter";
+import Divider from "../../../features/Divider";
 
 function FAQS() {
   const faqsData = [

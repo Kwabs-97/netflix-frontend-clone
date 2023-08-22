@@ -32,10 +32,11 @@
 }
 
 /* email input styles*/
+
+
 .loginForm .emailContainer {
   max-width: 100%;
   position: relative;
-  padding-bottom: 16px;
 }
 
 .emailContainer .emailInput {
@@ -125,7 +126,7 @@
   font-size: 14px;
   left: 20px;
   position: absolute;
-  top: 30%;
+  top: 35%;
   transform: translateY(-50%);
   transition: font 0.1s ease, top 0.1s ease, transform 0.1s ease;
 }
@@ -134,7 +135,7 @@
 .loginForm .passwordContainer {
   max-width: 100%;
   position: relative;
-  padding-bottom: 16px;
+  padding: 0;
 }
 
 .passwordContainer .passwordInput {
@@ -176,15 +177,19 @@
   left: 20px;
   position: absolute;
   top: 30%;
-  transform: translateY(-50%);
+  transform: translateY(-40%);
   transition: font 0.1s ease, top 0.1s ease, transform 0.1s ease;
 }
 
-.passwordContainer {
+.inputData {
   max-width: 100%;
   position: relative;
   padding-bottom: 16px;
 }
+.passwordContainer {
+  max-width: 100%;
+  position: relative;
+}
 
 .passwordContainer .passwordInput {
   background-color: #333;
@@ -227,6 +232,24 @@
   top: 30%;
   transform: translateY(-50%);
   transition: font 0.1s ease, top 0.1s ease, transform 0.1s ease;
+}
+
+.passwordContainer .passwordVisibleBtn {
+  position: absolute;
+  top: -50%;
+  transform: translateY(70%);
+  left: 82%;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: transparent;
+  border: 0;
+  color: #8c8c8c;
+  flex-grow: 0;
+  flex-shrink: 0;
+  font-size: 14px;
+  height: 50px;
+  padding: 0 12px;
 }
 
 /*Login Form Styles*/

@@ -3,10 +3,10 @@
 import React from "react";
 import classes from "./DownloadsHero.module.css";
 
-import DownloadsHeroImage from "../assets/mobile-0819.jpg";
-import subImg from "../assets/boxshot.png";
-import DownloadingIcon from "../assets/download-icon.gif";
-import Divider from "./Divider";
+import DownloadsHeroImage from "../../../assets/mobile-0819.jpg";
+import subImg from "../../../assets/boxshot.png";
+import DownloadingIcon from "../../../assets/download-icon.gif";
+import Divider from "../../../features/Divider";
 
 function DownloadsHero() {
   return (

@@ -2,8 +2,8 @@
 
 import React from "react";
 import classes from "./SubCard2.module.css";
-import profileImg from "../assets/AAAABejKYujIIDQciqmGJJ8BtXkYKKTi5jiqexltvN1YmvXYIfX8B9CYwooUSIzOKneblRFthZAFsYLMgKMyNfeHwk16DmEkpIIcb6A3.png";
-import Divider from "./Divider";
+import profileImg from "../../../assets/AAAABejKYujIIDQciqmGJJ8BtXkYKKTi5jiqexltvN1YmvXYIfX8B9CYwooUSIzOKneblRFthZAFsYLMgKMyNfeHwk16DmEkpIIcb6A3.png";
+import Divider from "../../../features/Divider";
 
 function SubCard2() {
   return (

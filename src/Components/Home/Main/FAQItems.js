@@ -2,8 +2,8 @@
 
 import React from "react";
 import classes from "./FAQS.module.css";
-import plusSVG from "../assets/plus-svgrepo-com.svg";
-import closeSVG from "../assets/close-md-svgrepo-com.svg";
+import plusSVG from "../../../assets/plus-svgrepo-com.svg";
+import closeSVG from "../../../assets/close-md-svgrepo-com.svg";
 
 function FAQItem({ question, answer, isActive, onToggle }) {
   return (

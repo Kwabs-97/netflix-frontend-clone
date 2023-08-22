@@ -71,7 +71,6 @@ function Newsletter() {
             </Link>
           </div>
         </form>
-        
       </div>
     </div>
   );

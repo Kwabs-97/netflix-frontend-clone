@@ -2,7 +2,7 @@
 
 import React from "react";
 import { Link } from "react-router-dom";
-import FooterLinks from "../Footer-items";
+import FooterLinks from "../Home/Footer/Footer-items";
 
 import classes from "./Footer.module.css";
 

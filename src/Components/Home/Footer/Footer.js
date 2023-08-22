@@ -7,9 +7,8 @@ import { ReactSVG } from "react-svg";
 
 import FooterItems from "./FooterItems";
 
-import webSVG from "../assets/web-svgrepo-com.svg";
-import dropdownSVG from "../assets/dropdown-svgrepo-com (1).svg";
-import Login from "./Login";
+import webSVG from "../../../assets/web-svgrepo-com.svg";
+import dropdownSVG from "../../../assets/dropdown-svgrepo-com (1).svg";
 
 function Footer() {
   const links = [

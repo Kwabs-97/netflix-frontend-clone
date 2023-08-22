@@ -2,7 +2,7 @@
 
 import React from "react";
 import classes from "./SubCard.module.css";
-import Divider from "./Divider";
+import Divider from "../../../features/Divider";
 
 function SubCard() {
   return (
