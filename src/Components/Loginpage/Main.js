@@ -6,10 +6,6 @@ import { Link } from "react-router-dom";
 
 import classes from "./Main.module.css";
 
-const formInput = React.memo(() => {
-  
-})
-
 function Main() {
   //Managing email input state for setting placeholder
 
@@ -29,13 +25,17 @@ function Main() {
     setInputFocused(!inputFocused);
   };
 
+  //Handling password visibility and conditionally rendering input text
   const togglePasswordVisibity = () => {
     setPasswordVisible(!passwordVisible);
   };
+  const inputText = passwordVisible ? "text" : "password";
 
   const passwordInputOnChangeHandler = (event) => {
     setPasswordInputValue(event.target.value);
   };
+
+  //Setting password error message
 
   const emailInputClassName =
     emailInputValue !== "" ? `${classes.emailInput} ${classes.emailHasValue} ` : classes.emailInput;
@@ -69,7 +69,7 @@ function Main() {
                 <div className={classes.passwordContainer}>
                   <label>
                     <input
-                      type="password"
+                      type={inputText}
                       className={passwordInputClassName}
                       onChange={passwordInputOnChangeHandler}
                       onFocus={handleInputFocus}
@@ -77,9 +77,19 @@ function Main() {
                     />
                     <label className={classes.inputPlaceholder}>Password</label>
 
-                    <button className={classes.passwordVisibleBtn} onClick={togglePasswordVisibity}>
+                    <button
+                      className={classes.passwordVisibleBtn}
+                      onClick={togglePasswordVisibity}
+                      type="button"
+                    >
                       {passwordVisible ? "HIDE" : "SHOW"}
                     </button>
+                    {inputFocused && passwordInputValue.length < 4 && (
+                      <p className={classes.passwordErrorMsg}>
+                        {" "}
+                        Your password must contain between 40 and 60 characters
+                      </p>
+                    )}
                   </label>
                 </div>
               </div>
