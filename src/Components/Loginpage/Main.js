@@ -85,15 +85,14 @@ function Main() {
                       ref={passwordInputRef}
                     />
                     <label className={classes.inputPlaceholder}>Password</label>
-
-                    <button
-                      className={classes.passwordVisibleBtn}
-                      onClick={togglePasswordVisibity}
-                      type="button"
-                    >
-                      {passwordVisible ? "HIDE" : "SHOW"}
-                    </button>
                   </label>
+                  <button
+                    className={classes.toggleBtn}
+                    onClick={togglePasswordVisibity}
+                    type="button"
+                  >
+                    {passwordVisible ? "HIDE" : "SHOW"}
+                  </button>
                 </div>
                 {passwordField.passwordErrorMessage && (
                   <p className={classes.passwordErrorMsg}>{passwordField.passwordErrorMessage}</p>

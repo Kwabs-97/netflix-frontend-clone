@@ -9,7 +9,7 @@ function FAQItem({ question, answer, isActive, onToggle }) {
   return (
     <li>
       <h3>
-        <button onClick={onToggle}>
+        <button onClick={onToggle} className={classes.FAQItem}>
           <span>{question}</span>
           <div>{isActive ? <img src={closeSVG} alt="" /> : <img src={plusSVG} alt="" />}</div>
         </button>

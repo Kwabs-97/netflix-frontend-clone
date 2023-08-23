@@ -42,8 +42,11 @@ function FAQS() {
     },
   ];
 
+  const [IsToggled, setIsToggled] = useState(false);
+
   const [activeIndex, setActiveIndex] = useState(null);
   const toggleHandler = (index) => {
+    setIsToggled(!IsToggled);
     setActiveIndex((prevIndex) => (prevIndex === index ? null : index));
   };
   return (
