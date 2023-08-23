@@ -32,11 +32,7 @@
 }
 
 /* email input styles*/
-<<<<<<< HEAD
-
-=======
->>>>>>> 42f6bb03eaae24f7b811876c6d4c6e3131357c3e
-.loginForm .emailContainer {
+<<<<<<< HEAD =======>>>>>>>42f6bb03eaae24f7b811876c6d4c6e3131357c3e .loginForm .emailContainer {
   max-width: 100%;
   position: relative;
 }
@@ -166,7 +162,7 @@
   padding: 16px 20px 0;
 }
 
-.passwordContainer .passwordInput:focus ~ label {
+.passwordContainer .passwordInput:focus ~ .inputPlaceholder {
   transform: translateY(-50%);
   transition: font 0.1s ease, top 0.1s ease, transform 0.1s ease;
   font-size: 10px;
@@ -180,7 +176,7 @@
   left: 20px;
   position: absolute;
   top: 30%;
-  transform: translateY(-40%);
+  transform: translateY(-50%);
   transition: font 0.1s ease, top 0.1s ease, transform 0.1s ease;
 }
 
@@ -261,6 +257,7 @@
   padding: 6px 3px;
   font-size: 13px;
   margin: 0;
+  position: absolute;
 }
 
 /*Login Form Styles*/
