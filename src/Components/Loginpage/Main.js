@@ -1,49 +1,56 @@
 /** @format */
 
 import React from "react";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { Link } from "react-router-dom";
+
+import { useDispatch, useSelector } from "react-redux";
+import { setEmailandPhone, SetPassword } from "../../store/reducers/form-reducer";
 
 import classes from "./Main.module.css";
 
 function Main() {
+  const emailField = useSelector((state) => state.form.email);
+  const passwordField = useSelector((state) => state.form.password);
+
+  const dispatch = useDispatch();
+
   //Managing email input state for setting placeholder
 
-  const [emailInputValue, setemailInputValue] = useState("");
-
-  const emailInputOnChangeHandler = (event) => {
-    setemailInputValue(event.target.value);
+  const emailChangeHandler = (event) => {
+    dispatch(setEmailandPhone(event.target.value));
   };
 
-  //Managing password input state for setting placeholder
   const [passwordVisible, setPasswordVisible] = useState(false);
-  const [inputFocused, setInputFocused] = useState(false);
-  const [passwordInputValue, setPasswordInputValue] = useState("");
-
-  //Handling password Input is Focused
-  const handleInputFocus = () => {
-    setInputFocused(!inputFocused);
-  };
-
-  //Handling password visibility and conditionally rendering input text
+  const passwordInputRef = useRef(null);
+  //Handling password visibility and conditionally showing or hiding password
   const togglePasswordVisibity = () => {
     setPasswordVisible(!passwordVisible);
+    // passwordInputRef.current.focus();
+    setTimeout(() => {
+      if (passwordInputRef.current) {
+        passwordInputRef.current.focus();
+        passwordInputRef.current.selectionStart = passwordInputRef.current.value.length;
+      }
+    }, 0);
   };
   const inputText = passwordVisible ? "text" : "password";
 
-  const passwordInputOnChangeHandler = (event) => {
-    setPasswordInputValue(event.target.value);
+  const passwordChangeHandler = (event) => {
+    dispatch(SetPassword(event.target.value));
   };
 
   //Setting password error message
 
-  const emailInputClassName =
-    emailInputValue !== "" ? `${classes.emailInput} ${classes.emailHasValue} ` : classes.emailInput;
+  const emailInputClassName = emailField.hasValue
+    ? `${classes.emailInput} ${classes.emailHasValue} `
+    : classes.emailInput;
 
-  const passwordInputClassName =
-    passwordInputValue !== ""
-      ? `${classes.passwordInput} ${classes.passwordHasValue} `
-      : classes.passwordInput;
+  const passwordClassName = passwordField.hasValue
+    ? `${classes.passwordInput} ${classes.passwordHasValue} `
+    : classes.passwordInput;
+
+  console.log(passwordField);
 
   return (
     <main className={classes.loginBody}>
@@ -58,22 +65,24 @@ function Main() {
                     <input
                       type="text"
                       className={emailInputClassName}
-                      onChange={emailInputOnChangeHandler}
+                      onChange={emailChangeHandler}
                     />
 
                     <label className={classes.inputPlaceholder}>Email or Phone Number</label>
                   </label>
                 </div>
+                {emailField.emailErrorMessage && (
+                  <p className={classes.passwordErrorMsg}>{emailField.emailErrorMessage}</p>
+                )}
               </div>
-              <div className={classes.inputData}>
+              <div className={classes.passwordData}>
                 <div className={classes.passwordContainer}>
                   <label>
                     <input
                       type={inputText}
-                      className={passwordInputClassName}
-                      onChange={passwordInputOnChangeHandler}
-                      onFocus={handleInputFocus}
-                      onBlur={handleInputFocus}
+                      className={passwordClassName}
+                      onChange={passwordChangeHandler}
+                      ref={passwordInputRef}
                     />
                     <label className={classes.inputPlaceholder}>Password</label>
 
@@ -84,14 +93,11 @@ function Main() {
                     >
                       {passwordVisible ? "HIDE" : "SHOW"}
                     </button>
-                    {inputFocused && passwordInputValue.length < 4 && (
-                      <p className={classes.passwordErrorMsg}>
-                        {" "}
-                        Your password must contain between 40 and 60 characters
-                      </p>
-                    )}
                   </label>
                 </div>
+                {passwordField.passwordErrorMessage && (
+                  <p className={classes.passwordErrorMsg}>{passwordField.passwordErrorMessage}</p>
+                )}
               </div>
               <Link className={classes.signInBtn}>Sign In</Link>
               <div className={classes.formHelp}>

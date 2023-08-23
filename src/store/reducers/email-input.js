@@ -3,10 +3,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 import isValidEmail from "email-validator";
 
-// const emailIsValid = (email) => {
-//   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-//   return emailRegex.test(email);
-// };
+
 
 const inputSlice = createSlice({
   name: "input",

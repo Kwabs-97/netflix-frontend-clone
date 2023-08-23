@@ -57,7 +57,7 @@ function EmailForms() {
             </div>
 
             <Link onClick={handleLinkClick}>
-              <span className={classes.text}> Get Started </span>
+              <span className={classes.text}> Get St </span>
               <span>
                 <img src={nextSVG} alt="" width={24} height={24} />
               </span>
