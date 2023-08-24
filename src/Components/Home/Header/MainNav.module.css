@@ -250,6 +250,10 @@ header .content {
 }
 
 @media (min-width: 600px) {
+  .heroContainer {
+    max-width: calc(100% - 4rem);
+    margin: 5rem;
+  }
   .formContainer .inputContainer {
     flex-direction: row;
     justify-content: center;
@@ -275,9 +279,10 @@ header .content {
   .navContainer {
     margin: 0 10rem;
   }
-  .mainContainer .heroContainer .formsContainer {
-    margin: 1.5rem 0 2rem;
-    padding: 0rem;
+ 
+
+.mainContainer .heroContainer {
+    
   }
   .container .content .navContainer .netflixSVG {
     display: flex;
@@ -288,8 +293,7 @@ header .content {
   }
 
   .mainContainer {
-    min-height: 33rem;
-
+    min-height: 29rem;
     align-items: center;
     justify-content: center;
   }
